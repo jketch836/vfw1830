@@ -39,3 +39,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/jketch/.
 
 !ENTRY org.eclipse.osgi 2 1 2013-11-25 20:09:08.801
 !MESSAGE NLS missing message: BasicProjectCreationPage_crossPlatformWarningIOS in: com.appcelerator.titanium.ui.wizard.messages
+
+!ENTRY org.eclipse.core.jobs 2 2 2013-11-25 20:13:33.772
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1

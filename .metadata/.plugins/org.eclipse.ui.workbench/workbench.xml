@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench version="2.0">
 <workbenchAdvisor/>
-<window height="878" width="1200" x="291" y="22">
+<window height="878" width="1200" x="240" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -17,6 +17,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.appcelerator.titanium.ui.ide.tiappEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -31,17 +33,29 @@
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/lab1_ketcham_josh/Resources/app.js" title="app.js" tooltip="lab1_ketcham_josh/Resources/app.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab1_ketcham_josh/Resources/app.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="25" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
 <view id="com.aptana.explorer.view" partName="App Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled=""/>
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="lab1_ketcham_josh">
+<project name="lab1_ketcham_josh">
+<selection>
+<element path="/lab1_ketcham_josh"/>
+</selection>
+</project>
+</viewState>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.appcelerator.titanium.ui.browser.dashboard" activePerspective="com.appcelerator.titanium.ui.StudioPerspective">
+<perspectives activePart="com.aptana.explorer.view" activePerspective="com.appcelerator.titanium.ui.StudioPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.appcelerator.titanium.ui.perspectives.TitaniumStudioPerspectiveFactory" id="com.appcelerator.titanium.ui.StudioPerspective" label="Studio"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -125,12 +139,28 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/lab1_ketcham_josh/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" path="/lab1_ketcham_josh/tiapp.xml"/>
+</editors>
+<item historyLabel="app.js" index="0">
+<position info="not_deleted" x="25" y="0"/>
+</item>
+<item historyLabel="TiApp Editor" index="1"/>
+<item active="true" historyLabel="app.js" index="0">
+<position info="not_deleted" x="25" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="leftArea"/>
+<trimItem IMemento.internal.id="bottomLeft"/>
+</trimArea>
 <trimArea IMemento.internal.id="1024">
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
@@ -139,5 +169,12 @@
 </trimArea>
 </trimLayout>
 </window>
-<mruList/>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="lab1_ketcham_josh/tiapp.xml">
+<persistable path="/lab1_ketcham_josh/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lab1_ketcham_josh/Resources/app.js">
+<persistable path="/lab1_ketcham_josh/Resources/app.js"/>
+</file>
+</mruList>
 </workbench>
