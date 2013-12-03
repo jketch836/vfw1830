@@ -1,0 +1,12 @@
+TI.UI.setBackgoundColor: ("green");
+
+var mainWindow = Ti.UI.createWindow({
+	title: "My First Window",
+	backgroundColor: "#ff000",
+	backgroundImage: "KS_nav_ui.png",
+	backgroundRepeat: true,
+	id: "window1"
+});
+
+mainWindow.open();
+

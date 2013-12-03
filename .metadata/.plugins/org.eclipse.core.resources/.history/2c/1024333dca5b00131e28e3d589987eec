@@ -1,0 +1,87 @@
+Ti.UI.setBackgoundColor("green");
+
+var defultMargin =10;
+
+var mainWindow = Ti.UI.createWindow({
+	title: "GoT Window",
+	backgroundImage: "silver.jpg",
+	backgroundRepeat: false
+	,
+});
+
+var HouseSigil = Ti.UI.createView({
+	backgroundColor: "#000080",
+	borderRadius: 10,
+	height: 40,
+	top: 20,
+	right: 5,
+	left: 5
+});
+
+var mainView = Ti.UI.createView({
+	borderColor: "#333",
+	borderRadius: 5,
+	height: Titanium.UI.SIZE,
+	right: 5,
+	left: 5,
+});
+
+var previous = Ti.UI.createView({
+	borderColor: "#89CFF0",
+	borderRadius: 5,
+	height: Titanium.UI.SIZE,
+	bottom: 50,
+	right: 200,
+	left: 0
+});
+
+var next = Ti.UI.createView({
+	borderColor: "#89CFF0",
+	height: Titanium.UI.SIZE,
+	bottom: 50,
+	right: 0,
+	left: 200
+});
+
+var HouseSigilText = Ti.UI.createLabel({
+	text: "House Sigil",
+	color: "#FFFFFF",
+	font: {fontsize: 14, fontFamily: "AmericanTypewriter"},
+	height: 30,
+	right: 40
+});
+var mainText = Ti.UI.createLabel({
+	text: "House Stark",
+	color: "#333",
+	font: {fontsize: 14, fontFamily: "AmericanTypewriter"},
+	height: Ti.UI.SIZE,
+});
+
+var previousText = Ti.UI.createLabel({
+	text: "Previous",
+	color: "#333",
+	font: {fontsize: 14, fontFamily: "AmericanTypewriter"},
+	height: 30,
+	right: 30,
+	left: 30
+});
+
+var nextText = Ti.UI.createLabel({
+	text: "Next",
+	color: "#333",
+	font: {fontsize: 14, fontFamily: "AmericanTypewriter"},
+	height: 30,
+	right: 30,
+	left: 30
+});
+
+
+next.add(nextText);
+previous.add(previousText);
+mainView.add(mainText);
+HouseSigil.add(HouseSigilText);
+mainWindow.add(HouseSigil);
+mainWindow.add(mainView);
+mainWindow.add(next);
+mainWindow.add(previous);
+mainWindow.open();

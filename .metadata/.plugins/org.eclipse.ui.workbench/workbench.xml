@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench version="2.0">
 <workbenchAdvisor/>
-<window height="878" width="1200" x="240" y="22">
+<window height="878" width="1200" x="14" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="0" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="106" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="0" y="22"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="0" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="0" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="0" y="22"/>
+<coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="150" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="144" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="40" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.editor.text" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.xml" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.appcelerator.titanium.ui.ide.tiappEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -29,25 +32,39 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/lab1_ketcham_josh/Resources/app.js" title="app.js" tooltip="lab1_ketcham_josh/Resources/app.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/lab1_ketcham_josh/Resources/app.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="25" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/Ketcham_Josh_Project1/Resources/app.js" title="app.js" tooltip="Ketcham_Josh_Project1/Resources/app.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Ketcham_Josh_Project1/Resources/app.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="com.aptana.explorer.view" partName="App Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="lab1_ketcham_josh">
-<project name="lab1_ketcham_josh">
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="Ketcham_Josh_Project1">
+<project name="Ketcham_Josh_Project1">
 <selection>
-<element path="/lab1_ketcham_josh"/>
+<element path="/Ketcham_Josh_Project1"/>
 </selection>
+</project>
+<project name="WindowViewLabel">
+<selection>
+<element path="/Ketcham_Josh_Project1"/>
+</selection>
+</project>
+<project name="lab1_ketcham_josh">
+<expanded>
+<element path="/lab1_ketcham_josh/Resources"/>
+</expanded>
 </project>
 </viewState>
 </view>
@@ -90,6 +107,7 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="com.aptana.explorer.view"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
@@ -114,14 +132,17 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.19966443" ratioLeft="238" ratioRight="954" relationship="2" relative="leftArea"/>
 <info folder="true" part="terminalArea" ratio="0.74939173" ratioLeft="616" ratioRight="206" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.aptana.terminal.views.terminal:*" label="LabelNotFound"/>
 <page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <page content="com.aptana.webserver.ui.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="bottomLeft" ratio="0.74939173" ratioLeft="616" ratioRight="206" relationship="4" relative="leftArea">
@@ -141,15 +162,142 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/lab1_ketcham_josh/Resources/app.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" path="/lab1_ketcham_josh/tiapp.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/appExample1/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/appExample1/Window/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" path="/appExample1/tiapp.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/appExample1/Window Views Labels/app.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/.DS_Store"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/app.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.xml" uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/.project"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/.gitignore"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.text" uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/LICENSE.txt"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/WindowViewLabel/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" path="/WindowViewLabel/tiapp.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project1/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" path="/Ketcham_Josh_Project1/tiapp.xml"/>
 </editors>
 <item historyLabel="app.js" index="0">
-<position info="not_deleted" x="25" y="0"/>
+<position info="not_deleted" x="65" y="0"/>
 </item>
-<item historyLabel="TiApp Editor" index="1"/>
-<item active="true" historyLabel="app.js" index="0">
-<position info="not_deleted" x="25" y="0"/>
+<item historyLabel="app.js" index="0">
+<position info="not_deleted" x="61" y="0"/>
+</item>
+<item historyLabel="app.js" index="1">
+<position info="not_deleted" x="127" y="0"/>
+</item>
+<item historyLabel="app.js" index="1">
+<position info="not_deleted" x="32" y="0"/>
+</item>
+<item historyLabel="TiApp Editor" index="2"/>
+<item historyLabel="app.js" index="1">
+<position info="not_deleted" x="23" y="0"/>
+</item>
+<item historyLabel="app.js" index="3">
+<position info="not_deleted" x="242" y="0"/>
+</item>
+<item historyLabel=".DS_Store" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel=".project" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel=".gitignore" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel=".DS_Store" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel="LICENSE.txt" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="880" y="0"/>
+</item>
+<item historyLabel="app.js | 12-2-13 Window Views Labels" index="5">
+<position info="not_deleted" x="371" y="0"/>
+</item>
+<item historyLabel="app.js | 12-2-13 Window Views Labels" index="5">
+<position info="not_deleted" x="321" y="0"/>
+</item>
+<item historyLabel="app.js | 12-2-13 Window Views Labels" index="5">
+<position info="not_deleted" x="317" y="0"/>
+</item>
+<item historyLabel="app.js | 12-2-13 Window Views Labels" index="5">
+<position info="not_deleted" x="352" y="0"/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="880" y="0"/>
+</item>
+<item historyLabel="app.js | 12-2-13 Window Views Labels" index="5">
+<position info="not_deleted" x="352" y="0"/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="880" y="0"/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="522" y="0"/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="766" y="0"/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="762" y="0"/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="805" y="0"/>
+</item>
+<item historyLabel="TiApp Editor" index="10"/>
+<item historyLabel="app.js" index="9">
+<position/>
+</item>
+<item historyLabel="app.js" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js" index="11">
+<position info="not_deleted" x="1596" y="0"/>
+</item>
+<item historyLabel="app.js | WindowViewLabel" index="9">
+<position info="not_deleted" x="0" y="901"/>
+</item>
+<item historyLabel="app.js" index="11">
+<position info="not_deleted" x="1596" y="0"/>
+</item>
+<item historyLabel="app.js | WindowViewLabel" index="9">
+<position info="not_deleted" x="0" y="901"/>
+</item>
+<item historyLabel="app.js" index="11">
+<position info="not_deleted" x="103" y="27"/>
+</item>
+<item historyLabel="TiApp Editor" index="12"/>
+<item historyLabel="app.js" index="11">
+<position info="not_deleted" x="103" y="27"/>
+</item>
+<item historyLabel="app.js" index="11">
+<position info="not_deleted" x="209" y="0"/>
+</item>
+<item historyLabel="app.js" index="11">
+<position info="not_deleted" x="1419" y="0"/>
+</item>
+<item historyLabel="app.js" index="11">
+<position info="not_deleted" x="1391" y="0"/>
+</item>
+<item active="true" historyLabel="app.js" index="11">
+<position info="not_deleted" x="1551" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -157,9 +305,8 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="leftArea"/>
-<trimItem IMemento.internal.id="bottomLeft"/>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
 <trimArea IMemento.internal.id="1024">
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
@@ -170,11 +317,47 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="lab1_ketcham_josh/tiapp.xml">
-<persistable path="/lab1_ketcham_josh/tiapp.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="Ketcham_Josh_Project1/tiapp.xml">
+<persistable path="/Ketcham_Josh_Project1/tiapp.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lab1_ketcham_josh/Resources/app.js">
-<persistable path="/lab1_ketcham_josh/Resources/app.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project1/Resources/app.js">
+<persistable path="/Ketcham_Josh_Project1/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="WindowViewLabel/Resources/app.js">
+<persistable path="/WindowViewLabel/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="WindowViewLabel/tiapp.xml">
+<persistable path="/WindowViewLabel/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/tiapp.xml">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.text" name="README" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/README">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/README"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="manifest" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/manifest">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/manifest"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.text" name="LICENSE.txt" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/LICENSE.txt">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/LICENSE.txt"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.text" name="LICENSE" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/LICENSE">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/LICENSE"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.text" name="CHANGELOG.txt" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/CHANGELOG.txt">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/CHANGELOG.txt"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/app.js">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.xml" name=".project" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/.project">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/.project"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name=".gitignore" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/.gitignore">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/.gitignore"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name=".DS_Store" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/12-2-13 Window Views Labels/.DS_Store">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/12-2-13%20Window%20Views%20Labels/.DS_Store"/>
 </file>
 </mruList>
 </workbench>
