@@ -1,0 +1,41 @@
+
+//Variables
+var noNames = 0;
+var HouseNames = [
+	"Arryn", 
+	"Baratheon", 
+	"Greyjoy", 
+	"Lannister", 
+	"Stark", 
+	"Tyrell", 
+	"Martell", 
+	"Targaryen"
+	];
+
+//Functions
+var nextHouse = function (){
+	if (noNames === (HouseNames.length - 1)){
+		noNames = 0;
+		mainText.text = HouseNames[noNames];
+	}else {
+		HouseNames.length;
+	}
+};
+
+var prevButton = function (){
+	if (noNames === (HouseNames.length - 1)){
+		noNames = 0;
+	}else {
+		HouseNames.length;
+	}
+};
+
+
+var mainText = Ti.UI.createLabel({
+	//text: noNames + 1 + HouseNames[noNames],
+	text: HouseNames[noNames],
+	color: "#333",
+	font: {fontsize: 16, fontFamily: "AmericanTypewriter"},
+	height: 50,
+	center: 0
+});

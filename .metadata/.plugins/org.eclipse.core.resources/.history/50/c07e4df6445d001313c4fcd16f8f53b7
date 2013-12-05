@@ -1,0 +1,105 @@
+
+var mainWindow = Ti.UI.createWindow({
+	title: "My First Window",
+	backgroundColor: "#ff0000",
+	backgroundRepeat: true,
+	id: "window1"
+});
+
+
+//include
+var launchwin= function (){
+	console.log ("launch win does work");
+	//not recomened. less strict. globals are accessible.
+	Ti.include("********.js");
+	mainWindow.open();
+};
+
+myView.addEventListener("click", launchwin);
+
+
+
+//require
+var launchwin1= function (){
+	var mainWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		backgroundImage: "*******.png",
+		backgroundRepeat: true
+	});
+	var diceGamefile = require("dicegame");
+};
+
+myView.addEventListener("click", launchwin1);
+
+
+
+//custom events
+var increment = function (){
+	if(progressBar.value < 95) {
+		//change value of bar
+		progresBar.fireEvent("update", {value: 10});
+		//move box
+		randomView.left = Math.random()*Ti.Platform.displayCaps.platformWidth;
+		randomView.top = Math.random()*Ti.Platform.displayCaps.platformHeight;
+	} else {
+		//complete game
+		Ti.App.fireEvent("complete");
+		alert("You Lost!");
+	}
+};
+
+var timer = setInterval(increment, 1000);
+
+var window = Ti.UI.createWindow ({
+	backgroundColor:"#fff"
+});
+
+var progressBar = Ti.UI.createProgressBar({
+	min:0,
+	max:100,
+	value: 30,
+	message: "Con you Stop the Progress?",
+	width:"70%"
+});
+
+var randomView = Ti.UI.createView({
+	width:"10%",
+	height:"10%",
+	backgroundColor: "green",
+	borderColor: "black"
+});
+
+
+progressBar.addEventListener("update", function(event){
+	progressBar.value = progressBar.value + event.value;
+});
+
+
+var decrement = function (){
+	if (progressBar.value <= 5){
+		//user Wins
+		Ti.App.fireEvent("complete");
+		alert("You Win!")
+	}else {
+		// update value
+		
+	}
+};
+
+randomView.addEventListener("click", decrement);
+
+
+Ti.App.addEventListener("complete", function(event){
+	progressBar.hide();
+	clearInterval(timer);
+	progressBar = null;
+	randomView.hide();
+	randomView = null;
+});
+
+
+window.add(progressBar);
+window.add(randomView);
+progressBar.show();
+
+window.open();

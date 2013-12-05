@@ -1,0 +1,28 @@
+
+var mainWindow = Ti.UI.createWindow({
+	title: "My First Window",
+	backgroundColor: "#ff0000",
+	backgroundRepeat: true,
+	id: "window1"
+});
+
+
+//include
+var launchwin= function (){
+	console.log ("launch win does work");
+	//not recomened. less strict. globals are accessible.
+	Ti.include("********.js")
+	mainWindow.open();
+};
+
+
+myView.addEventListener("click", launchwin);
+
+
+
+
+//require
+var launchwin1= function (){
+	var diceGamefile = require("dicegame");
+};
+
