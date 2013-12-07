@@ -1,0 +1,111 @@
+/*
+//TABLEVIEWS
+
+var mainWindow = Ti.UI.createWindow({
+	
+});
+
+
+var myData = [{title:"Apple"}, {title: "Banana"}, {title: "Oranges"}, {title: "Peaches"}];
+var osname = Ti.Platform.osname;
+
+if(osname === "iPhone"){
+	var iPhoneStyle = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	myTable.style = iPhoneStyle;
+
+};
+
+var myTable = Ti.UI.createTableView ({
+	//Optional
+	//style: Ti.UI.iPhone.TableViewStyle.GROUPED
+	//style: Ti.UI.iPhone.TableViewStyle.PLAIN
+});
+
+
+myTable.setData(myData);
+mainWindow.add(myTable);
+mainWindow.open();
+
+
+//TABLEVIEWSECTIONS
+var window= Ti.UI.createWindow();
+
+
+//Data
+var fruits = [{title: "Apple"}, {title: "Bananas"},];
+var vegeies = [{title: "Carrots"}, {title: "Potatoes"}];
+
+//TAbleView
+var table= Ti.UI.createTableView({
+	top: 20
+});
+
+//TAbleView Sections
+var fruitSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Fruits",
+	footerTitle: "List to Buy"
+});
+
+var vegieSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Vegies",
+	footerTitle: "List to Buy"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [fruitSection, vegieSection];
+table.setData(myDataSetions);
+
+
+
+window.add(table);
+
+window.open();
+*/
+
+
+//TABLEVIEWROWS
+var window= Ti.UI.createWindow();
+
+
+//Data
+var fruits = [{title: "Apple"}, {title: "Bananas"},];
+var vegeies = [{title: "Carrots"}, {title: "Potatoes"}];
+
+//TAbleView
+var table= Ti.UI.createTableView();
+
+//TAbleView Sections
+var fruitSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Fruits",
+	footerTitle: "List to Buy"
+});
+
+var vegieSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Vegies",
+	footerTitle: "List to Buy"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [fruitSection, vegieSection];
+table.setData(myDataSetions);
+
+//TAbleView Rows
+for(var i=0, j=friuts.length; i<j; i++){
+	var Row = ti.UI.createTableViewRows({
+		title:friuts[i].title
+	});
+	fruitSection.add(Row);
+};
+
+for(var i=0, j=vegies.length; i<j; i++){
+	var Row = ti.UI.createTableViewRows({
+		title:vegies[i].title
+	});
+	vegieSection.add(Row);
+};
+
+
+
+window.add(table);
+window.open();
+

@@ -1,0 +1,18 @@
+var starkMem =
+	[
+		{
+			 title: "Ned Stark", 
+			 info: "Ned Stark was the head of the House Stark. However he was behead by Jofferry Baratheon for the crime of treason."
+		}
+
+	];
+
+var lannMem =	
+	[
+
+	 	{
+	 		title: "Tyrion Lannister", 
+	 		info: "Tyrion Lannister is the second son to Tywin Lannister. He has two older twin sibilings (Cersei and Jamie). Even though he is a dwarf, his cunning and sharp mind rivals that of his father's."
+	 	}
+	 	
+	 ];

@@ -1,0 +1,64 @@
+//NAV WINDOWS
+var mWindow= Ti.UI.createWindow({
+	title: "Noble House Members of Westros"
+});
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mWindow
+});
+
+
+//TableView
+var table= Ti.UI.createTableView();
+
+//TableView Sections
+
+var starkSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Stark",
+	footerTitle: "			Winter is Comming"
+});
+
+var lannisterSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Lannister",
+	footerTitle: "			Hear us Roar"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [starkSection, lannisterSection];
+table.setData(myDataSetions);
+
+//TableView Rows
+var getDetail = function(){
+	var detailWindow = Ti.UI.createWindow({
+		backgroundImage: "#fff",
+		title: this.title
+	});
+	var detailLabel = Ti.UI.createLabel({
+		text: this.bio
+	});
+	detailWindow.add(detailLabel);
+	navWindow.openWindow(detailWindow, {animate: true});
+};
+
+for(var i=0, j=NobleHouseMembers.Stark.length; i<j; i++){
+	var houseRow = Ti.UI.createTableViewRow({
+		title: stark[i].title,
+		bio: stark[i].info
+	});
+	starkSection.add(Row);
+	houseRow.addEventListener("click", getDetail);
+};
+
+for(var i=0, j=NobleHouseMembers.Lannister.length; i<j; i++){
+	var houseRow = Ti.UI.createTableViewRow({
+		title: lannister[i].title,
+		bio: lannister[i].info
+	});
+	lannisterSection.add(houseRow);
+	houseRow.addEventListener("click", getDetail);
+};
+
+
+
+mWindow.add(table);
+navWindow.open();
+

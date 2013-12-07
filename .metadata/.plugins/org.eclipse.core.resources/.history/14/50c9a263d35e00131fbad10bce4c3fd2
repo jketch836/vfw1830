@@ -1,0 +1,186 @@
+/*
+//TABLEVIEWS
+
+var mainWindow = Ti.UI.createWindow({
+	
+});
+
+
+var myData = [{title:"Apple"}, {title: "Banana"}, {title: "Oranges"}, {title: "Peaches"}];
+var osname = Ti.Platform.osname;
+
+if(osname === "iPhone"){
+	var iPhoneStyle = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	myTable.style = iPhoneStyle;
+
+};
+
+var myTable = Ti.UI.createTableView ({
+	//Optional
+	//style: Ti.UI.iPhone.TableViewStyle.GROUPED
+	//style: Ti.UI.iPhone.TableViewStyle.PLAIN
+});
+
+
+myTable.setData(myData);
+mainWindow.add(myTable);
+mainWindow.open();
+
+
+//TABLEVIEWSECTIONS
+var window= Ti.UI.createWindow();
+
+
+//Data
+var fruits = [{title: "Apple"}, {title: "Bananas"},];
+var vegeies = [{title: "Carrots"}, {title: "Potatoes"}];
+
+//TAbleView
+var table= Ti.UI.createTableView({
+	top: 20
+});
+
+//TAbleView Sections
+var fruitSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Fruits",
+	footerTitle: "List to Buy"
+});
+
+var vegieSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Vegies",
+	footerTitle: "List to Buy"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [fruitSection, vegieSection];
+table.setData(myDataSetions);
+
+
+
+window.add(table);
+
+window.open();
+
+
+
+//TABLEVIEWROWS
+var window= Ti.UI.createWindow();
+
+
+//Data
+var fruits = [{title: "Apple"}, {title: "Bananas"},];
+var vegeies = [{title: "Carrots"}, {title: "Potatoes"}];
+
+//TAbleView
+var table= Ti.UI.createTableView();
+
+//TAbleView Sections
+var fruitSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Fruits",
+	footerTitle: "List to Buy"
+});
+
+var vegeieSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Vegies",
+	footerTitle: "List to Buy"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [fruitSection, vegeieSection];
+table.setData(myDataSetions);
+
+//TAbleView Rows
+var getDetail = function(){
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff"
+	});
+	detailWindow.open();
+};
+
+for(var i=0, j=fruits.length; i<j; i++){
+	var Row = Ti.UI.createTableViewRow({
+		title: fruits[i].title
+	});
+	fruitSection.add(Row);
+	Row.addEventListener("click", getDetail);
+};
+
+for(var i=0, j=vegeies.length; i<j; i++){
+	var Row = Ti.UI.createTableViewRow({
+		title: vegeies[i].title
+	});
+	vegeieSection.add(Row);
+	Row.addEventListener("click", getDetail);
+};
+
+
+
+window.add(table);
+window.open();
+*/
+
+
+
+//INTERACTIVE TABLES
+var window= Ti.UI.createWindow();
+Ti.UI.setBackgroundColor("white");
+
+//Data
+var fruits = [{title: "Apple", content: "Apples are cool"}, {title: "Bananas", content: "Bananas are not cool"},];
+var vegeies = [{title: "Carrots", content: "Carrots are cool"}, {title: "Potatoes", content: "Potatoes are not ool"}];
+
+//TAbleView
+var table= Ti.UI.createTableView({
+		top: 20,
+});
+
+//TAbleView Sections
+var fruitSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Fruits",
+	footerTitle: "List to Buy"
+});
+
+var vegeieSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Vegies",
+	footerTitle: "List to Buy"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [fruitSection, vegeieSection];
+table.setData(myDataSetions);
+
+//TAbleView Rows
+var getDetail = function(){
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff"
+	});
+	var detailLabel = Ti.UI.createLabel({
+		text: this.desc
+	});
+	detailWindow.add(detailLabel);
+	detailWindow.open();
+};
+
+for(var i=0, j=fruits.length; i<j; i++){
+	var Row = Ti.UI.createTableViewRow({
+		title: fruits[i].title,
+		desc: fruits[i].content
+	});
+	fruitSection.add(Row);
+	Row.addEventListener("click", getDetail);
+};
+
+for(var i=0, j=vegeies.length; i<j; i++){
+	var Row = Ti.UI.createTableViewRow({
+		title: vegeies[i].title,
+		desc: vegeies[i].content
+	});
+	vegeieSection.add(Row);
+	Row.addEventListener("click", getDetail);
+};
+
+
+
+window.add(table);
+window.add(theView);
+window.open();

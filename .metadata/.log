@@ -633,3 +633,34 @@ java.lang.RuntimeException: WARNING: Blocked recursive attempt to close part com
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SESSION 2013-12-06 17:20:14.504 -----------------------------------------------
+eclipse.buildId=3.1.3.201309132423
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/jketch/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/jketch/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-12-06 17:20:33.814
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.osgi 2 1 2013-12-06 17:21:06.621
+!MESSAGE NLS missing message: BasicProjectCreationPage_crossPlatformWarningAndroid in: com.appcelerator.titanium.ui.wizard.messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-12-06 17:21:06.621
+!MESSAGE NLS missing message: BasicProjectCreationPage_crossPlatformWarningIOS in: com.appcelerator.titanium.ui.wizard.messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-12-06 17:31:21.619
+!MESSAGE NLS missing message: NodeTitaniumSDKCommandsHandler_mobileWebBuild in: com.appcelerator.titanium.mobile.cli.messages
+
+!ENTRY org.eclipse.ui 4 4 2013-12-06 22:04:33.542
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-12-06 22:13:04.775
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-12-06 22:20:17.713
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined
+
+!ENTRY org.eclipse.ui 4 4 2013-12-06 22:21:48.266
+!MESSAGE Unable to create menu item "com.appcelerator.titanium.mobile.command.install.blackberry", command "com.appcelerator.titanium.mobile.command.install.blackberry" not defined

@@ -1,0 +1,61 @@
+/*
+var mainWindow = Ti.UI.createWindow({
+	
+});
+
+
+var myData = [{title:"Apple"}, {title: "Banana"}, {title: "Oranges"}, {title: "Peaches"}];
+var osname = Ti.Platform.osname;
+
+if(osname === "iPhone"){
+	var iPhoneStyle = Ti.UI.iPhone.TableViewStyle.GROUPED;
+	myTable.style = iPhoneStyle;
+
+};
+
+var myTable = Ti.UI.createTableView ({
+	//Optional
+	//style: Ti.UI.iPhone.TableViewStyle.GROUPED
+	//style: Ti.UI.iPhone.TableViewStyle.PLAIN
+});
+
+
+myTable.setData(myData);
+mainWindow.add(myTable);
+mainWindow.open();
+*/
+
+
+var window= Ti.UI.createWindow();
+var headView= Ti.UI.createView({
+	height: 20
+});
+
+//Data
+var fruits = [{title: "Apple"}, {title: "Bananas"},];
+var vegeies = [{title: "Carrots"}, {title: "Potatoes"}];
+
+//TAbleView
+var table= Ti.UI.createTableView({
+	
+});
+
+//TAbleView Sections
+var fruitSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Fruits",
+	footerTitle: "List to Buy"
+});
+
+var vegieSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Vegies",
+	footerTitle: "List to Buy"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [fruitSection, vegieSection];
+table.setData(myDataSetions);
+
+
+window.add(headView);
+window.add(table);
+window.open();

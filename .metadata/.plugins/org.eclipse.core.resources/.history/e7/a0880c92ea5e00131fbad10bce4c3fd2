@@ -1,0 +1,63 @@
+//NAV WINDOWS
+var mWindow= Ti.UI.createWindow({
+	title: "Noble Houses of Westros"
+});
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window: mWindow
+});
+
+
+//TAbleView
+var table= Ti.UI.createTableView();
+
+//TAbleView Sections
+var fruitSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Fruits",
+	footerTitle: "Items Needed"
+});
+
+var vegeieSection = Ti.UI.createTableViewSection ({
+	headerTitle: "Vegies",
+	footerTitle: "			Items Needed"
+});
+
+//Set the TableViewSection to the Table
+var myDataSetions = [fruitSection, vegeieSection];
+table.setData(myDataSetions);
+
+//TAbleView Rows
+var getDetail = function(){
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		title: this.title
+	});
+	var detailLabel = Ti.UI.createLabel({
+		text: this.desc
+	});
+	detailWindow.add(detailLabel);
+	navWindow.openWindow(detailWindow, {animate: true});
+};
+
+for(var i=0, j=fruits.length; i<j; i++){
+	var Row = Ti.UI.createTableViewRow({
+		title: fruits[i].title,
+		desc: fruits[i].content
+	});
+	fruitSection.add(Row);
+	Row.addEventListener("click", getDetail);
+};
+
+for(var i=0, j=vegeies.length; i<j; i++){
+	var Row = Ti.UI.createTableViewRow({
+		title: vegeies[i].title,
+		desc: vegeies[i].content
+	});
+	vegeieSection.add(Row);
+	Row.addEventListener("click", getDetail);
+};
+
+
+
+mWindow.add(table);
+navWindow.open();
+

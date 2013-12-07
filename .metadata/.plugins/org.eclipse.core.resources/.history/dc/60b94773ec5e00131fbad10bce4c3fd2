@@ -1,0 +1,27 @@
+var stark = 
+"Stark":
+	[
+		{
+			 title: "Ned Stark", 
+			 info: "Ned Stark was the head of the Stark Family. However he was behead by Jofferry Baratheon for the crime of treason."
+		}, 
+	 
+	 	{
+	 		title: "Catylen Tully", 
+	 		info: "Catylen Tully was Ned Stark's wife who was /'suposidly/' murdered at the Red Wedding by Walter Frey of House Frey at the Twins."
+	 	},
+	 	
+	 ];
+var Lannister = 
+"Lannister":	
+	[
+		{
+			 title: "Cersei Lannister", 
+			 info: "Cersei Lannister is the only daughter of Tywin Lannister and has a twin brother named Jamie. She is Queen of the Seven Kingdoms and was married to Robert Baratheon until his untimely death."
+		}, 
+	 	{
+	 		title: "Tyrion Lannister", 
+	 		info: "Tyrion Lannister is the second son to Tywin Lannister and has two older twin sibilings (Cersei and Jamie). Even though he is a dwarf, his cunning and sharp mind rivals that of his father's."
+	 	},
+	 	
+	 ];
