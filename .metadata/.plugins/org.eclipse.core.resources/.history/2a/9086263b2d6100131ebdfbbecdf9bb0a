@@ -1,0 +1,122 @@
+/*
+var mainWindow = Ti.UI.createWindow();
+
+Ti.UI.setBackgroundColor("white");
+var listview= Ti.UI.createListView({backgroundColor:"#fff", top:20});
+
+
+var toDo= 
+	[
+		{
+			id: "homework", 
+			name: "Homework",
+			icon: "homework.jpg"	
+		},
+		{
+			id: "Mow Lawn", 
+			name: "Mow Lawn",
+			icon: "MowLawn.jpg"	
+		},
+		{
+			id: "Clean Pool", 
+			name: "Clean Pool",
+			icon: "CleanPool.jpg"	
+		},
+		{
+			id: "Clean Garage", 
+			name: "Clean Garage",
+			icon: "CleanGarage.jpg"	
+		}
+	];
+
+
+var data = [];
+for (var i=0, j=toDo.length; i<j; i++){
+	data.push(
+	{
+		properties: 
+			{
+				itemId: toDo[i].id,
+				title: toDo[i].name, 
+				image: toDo[i].icon, 
+				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_NONE,
+				color: "black"
+			}
+	}
+	);
+};
+
+
+var listSection = Ti.UI.createListSection();
+listSection.setItems(data);
+
+listview.sections = [listSection];
+
+mainWindow.add(listview);
+mainWindow.open();
+*/
+
+
+// ListView Template
+myTemplate = {
+	childTemplates:
+	[
+		{
+			type: "Ti.UI.ImageView",
+			bindId: 'pic',
+			properties:
+			{
+				width: 50,
+				height: 50,
+				left: 0,
+			}
+		},
+		{
+			type: "Ti.UI.Lebel",
+			bindId: 'info',
+			properties:
+			{
+				color: "black",
+				font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+				left: 60,
+				top: 0
+			}
+		},
+		{
+			type: "Ti.UI.Lebel",
+			bindId: 'es_info',
+			properties:
+			{
+				color: "black",
+				font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+				left: 60,
+				top: 0
+			}
+		}
+	]
+	
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

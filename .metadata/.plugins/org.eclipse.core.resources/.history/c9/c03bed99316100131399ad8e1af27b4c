@@ -1,0 +1,163 @@
+
+
+// ListView Template
+myTemplate = {
+	childTemplates:
+	[
+		{
+			type: "Ti.UI.ImageView",
+			bindId: 'pic',
+			properties:
+			{
+				width: 50,
+				height: 50,
+				left: 0,
+			}
+		},
+		{
+			type: "Ti.UI.Lebel",
+			bindId: 'info',
+			properties:
+			{
+				color: "black",
+				font: {fontSize: 20, fontFamily: "Arial", fontWeight: "bold"},
+				left: 60,
+				top: 0
+			}
+		},
+		{
+			type: "Ti.UI.Lebel",
+			bindId: 'es_info',
+			properties:
+			{
+				color: "grey",
+				font: {fontSize: 14, fontFamily: "Arial"},
+				left: 60,
+				top: 25
+			}
+		}
+	]
+	
+};
+
+
+var mainWindow= Ti.UI.createWindow();
+
+//ListView
+var listView = Ti.UI.createListView({
+	top:20,
+	templates:{'defaultTemplate': myTemplate},
+	defaultItemTemplate: 'defaultTemplate'
+});
+
+var listSections = [];
+
+//Create ListView Section
+
+var fruits= Ti.UI.createListSection({
+	headerTitle: "Friut / Frutas"
+});
+
+
+//Data
+var friutData = 
+	[
+		{
+			info:
+				{
+					text:"Apple"
+				},
+			es_info:
+				{
+					text: "Manzana"
+				},
+			pic:
+				{
+					image: "apple.png"
+				},
+			properties:
+				{
+					height: 100,
+					backgroundColor: "#333"
+				},	
+				
+				
+		},
+		{
+			info:
+				{
+					text:"Banana"
+				},
+			es_info:
+				{
+					text: "Banana"
+				},
+			pic:
+				{
+					image: "banana.png"
+				}	
+		}
+	];
+
+
+
+
+var vegies= Ti.UI.createListSection({
+	headerTitle: "Vegies / Verduras"
+});
+
+
+//Data
+var vegiesData = 
+	[
+		{
+			info:
+				{
+					text:"Carrots"
+				},
+			es_info:
+				{
+					text: "Zanahorias"
+				},
+			pic:
+				{
+					image: "carrot.png"
+				},
+			properties:
+				{
+					height: 100,
+					backgroundColor: "#333"
+				},	
+				
+				
+		},
+		{
+			info:
+				{
+					text:"Potatoes"
+				},
+			es_info:
+				{
+					text: "Patatas"
+				},
+			pic:
+				{
+					image: "potatoes.png"
+				}	
+		}
+	];
+
+
+
+vegies.setItems(vegiesData);
+listView.appendSection(vegies);
+fruits.setItems(friutData);
+listSections.push(fruits);
+listView.sections = listSections;
+
+
+
+
+mainWindow.add(listView);
+mainWindow.open();
+

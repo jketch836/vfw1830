@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench version="2.0">
 <workbenchAdvisor/>
-<window height="878" width="1200" x="174" y="22">
+<window height="878" width="1200" x="-1" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -58,15 +58,18 @@
 <element path="/Ketcham_Josh_Project2/Resources"/>
 </expanded>
 <selection>
-<element path="/Ketcham_Josh_Project2/Resources/Lannister.jpg"/>
+<element path="/Ketcham_Josh_Project2/Resources/HouseMembers.js"/>
 </selection>
 </project>
 <project name="lab1_ketcham_josh">
 <expanded>
 <element path="/lab1_ketcham_josh/Resources"/>
 </expanded>
+<selection>
+<element path="/Ketcham_Josh_Project2"/>
+</selection>
 </project>
-<project name="lec 4">
+<project name="lec 6">
 <selection>
 <element path="/Ketcham_Josh_Project2"/>
 </selection>
@@ -136,7 +139,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.19966443" ratioLeft="238" ratioRight="954" relationship="2" relative="leftArea"/>
-<info folder="true" part="terminalArea" ratio="0.74939173" ratioLeft="616" ratioRight="206" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="terminalArea" ratio="0.7392405" ratioLeft="584" ratioRight="206" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.aptana.terminal.views.terminal:*" label="LabelNotFound"/>
@@ -183,6 +186,36 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="HouseMembers.js" tooltip="Ketcham_Josh_Project2/Resources/HouseMembers.js">
+<persistable path="/Ketcham_Josh_Project2/Resources/HouseMembers.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project2/Resources/app.js">
+<persistable path="/Ketcham_Josh_Project2/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/vfw_labs/Ketcham_Josh_Project2/Resources/app.js">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/vfw_labs/Ketcham_Josh_Project2/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/lec5 codeRefactoring/Resources/app.js">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/lec5%20codeRefactoring/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.json" name="NobleHouseMembers.json" tooltip="Ketcham_Josh_Project2/Resources/NobleHouseMembers.json">
+<persistable path="/Ketcham_Josh_Project2/Resources/NobleHouseMembers.json"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="lec2.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/lec2.js">
+<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/lec2.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="lec 6/tiapp.xml">
+<persistable path="/lec 6/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lec 6/Resources/app.js">
+<persistable path="/lec 6/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="lec5/tiapp.xml">
+<persistable path="/lec5/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lec5/Resources/app.js">
+<persistable path="/lec5/Resources/app.js"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="Lannister.jpg" tooltip="Ketcham_Josh_Project2/Resources/Lannister.jpg">
 <persistable path="/Ketcham_Josh_Project2/Resources/Lannister.jpg"/>
 </file>
@@ -191,36 +224,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="ArrayDisplayView.js" tooltip="Ketcham_Josh_Project1/Resources/ArrayDisplayView.js">
 <persistable path="/Ketcham_Josh_Project1/Resources/ArrayDisplayView.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project1/Resources/app.js">
-<persistable path="/Ketcham_Josh_Project1/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="HouseMembers.js" tooltip="Ketcham_Josh_Project2/Resources/HouseMembers.js">
-<persistable path="/Ketcham_Josh_Project2/Resources/HouseMembers.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.json" name="NobleHouseMembers.json" tooltip="Ketcham_Josh_Project2/NobleHouseMembers.json">
-<persistable path="/Ketcham_Josh_Project2/NobleHouseMembers.json"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="Ketcham_Josh_Project2/tiapp.xml">
-<persistable path="/Ketcham_Josh_Project2/tiapp.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project2/Resources/app.js">
-<persistable path="/Ketcham_Josh_Project2/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="day2.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/day2.js">
-<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/day2.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="lec 4/tiapp.xml">
-<persistable path="/lec 4/tiapp.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lec 4/Resources/app.js">
-<persistable path="/lec 4/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="GoT Window.js" tooltip="Ketcham_Josh_Project1/Resources/GoT Window.js">
-<persistable path="/Ketcham_Josh_Project1/Resources/GoT Window.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="HouseNames.js" tooltip="Ketcham_Josh_Project1/Resources/HouseNames.js">
-<persistable path="/Ketcham_Josh_Project1/Resources/HouseNames.js"/>
 </file>
 </mruList>
 </workbench>

@@ -1,19 +1,40 @@
-var HouseMem = 
-"Stark":
-	[
-		{
-			 title: "Ned Stark", 
-			 info: "Ned Stark was the head of the Stark Family. However he was behead by Jofferry Baratheon for the crime of treason."
-		}
+var houseRules = function(){
+	var houseWindow = Ti.UI.createWindow({
+		title: this.title,
+		font: {fontSize: 18, fontFamily: "AmericanTypewriter"},
+		backgroundImage: this.housePicture,
+	});
+	var houseLabel = Ti.UI.createLabel({
+		text: this.info,
+		font: {fontSize: 12, fontFamily: "AmericanTypewriter"},
+		backgroundColor: "#808080",
+		borderRadius: 5,
+		height: Ti.UI.SIZE,
+		bottom: 120
+	});	
+	houseWindow.add(houseLabel);
+	navWindow.openWindow(houseWindow, {animate: true});
+};
 
-	]
 
-"Lannister":	
-	[
+var theDualHouse = [];
 
-	 	{
-	 		title: "Tyrion Lannister", 
-	 		info: "Tyrion Lannister is the second son to Tywin Lannister and has two older twin sibilings (Cersei and Jamie). Even though he is a dwarf, his cunning and sharp mind rivals that of his father's."
-	 	}
-	 	
-	 ];
+
+for (var n in houseData) {
+	var tableSec = Ti.UI.createTableViewSection ({
+		headerTitle: houseData[n].headTitle,
+		footerTitle: houseData[n].footTitle
+	});
+		for(var i = 0, j = houseData[n].houseRow.length; i<j; i++){
+			var theRows = Ti.UI.createTableViewRow({
+				title: houseData[n].houseRow[i].title,
+				info: houseData[n].houseRow[i].info,
+				housePicture: houseData[n].houseRow[i].housePicture,
+				font: {fontSize: 12, fontFamily: "Arial"},
+				hasChild: true
+			});
+			tableSec.add(theRows);
+			//theRows.addEventListener("click", houseRules);
+	};
+	theDualHouse.push(tableSec);
+}

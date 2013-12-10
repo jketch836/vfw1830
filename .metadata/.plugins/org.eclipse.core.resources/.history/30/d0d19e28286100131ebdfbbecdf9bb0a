@@ -1,0 +1,198 @@
+/*
+var mainWindow = Ti.UI.createWindow();
+var navWindow = Ti.UI.iOS.createNavigationWindow({
+	window : mainWindow
+});
+
+//Data
+var myData = 
+	{
+		"friuts":{
+		"headTitle": "Friuts",
+		"footTitle": "Buy this Stuff",
+		"rowData": 
+			[
+				{
+					title: "Apples",
+					desc: "This is apples the friut, not the tech company"
+				},
+				{
+					title: "Bananas",
+					desc: "This is bananas",
+				}
+			]
+		},
+			
+		"Vegies":{
+		"headTitle": "Vegies",
+		"footTitle": "Buy this Stuff",
+		"rowData": 
+			[
+					{
+						title: "Carrot",
+						desc: "This is a carrot. It has a crunchy thingy"
+					},
+					{
+						title: "Potatoes",
+						desc: "This is potato, not a toy",
+					}
+			]
+		}
+	};
+
+//Table
+
+var table= Ti.UI.createTableView({
+	style: Ti.UI.iPhone.TableViewStyle.GROUPED
+});
+
+
+
+//getDetail Func
+
+var getDetail = function(){
+	
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		title: this.title,
+		font: {fontSize: 18, fontFamily: "Arial"}
+	});
+	
+	var detailText = Ti.UI.createLabel({
+		text: this.desc,
+		font: {fontSize: 12, fontFamily: "Arial"}
+	});
+	
+	detailWindow.add(detailText);
+	navWindow.openWindow(detailWindow, {animate: true});
+};
+
+var theSections = [];
+
+//Get the data
+
+
+for (var n in myData) {
+	var tableSection = Ti.UI.createTableViewSection ({
+		headerTitle: myData[n].headTitle,
+		footerTitle: myData[n].footTitle
+	});
+	for(var i = 0, j = myData[n].rowData.length; i<j; i++){
+		var theRow = Ti.UI.createTableViewRow({
+			title: myData[n].rowData[i].title,
+			desc: myData[n].rowData[i].desc,
+			hasChild: true
+		});
+		tableSection.add(theRow);
+		//theRow.addEventListener("click", getDetail);
+	};
+	theSections.push(tableSection);
+}
+
+table.addEventListener("click", function(event){
+	//alert(event.source.title);
+	var detailWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		title: event.source.title,
+		font: {fontSize: 18, fontFamily: "Arial"}
+	});
+	
+	var detailText = Ti.UI.createLabel({
+		text: event.source.desc,
+		font: {fontSize: 12, fontFamily: "Arial"}
+	});
+	
+	detailWindow.add(detailText);
+	navWindow.openWindow(detailWindow, {animate: true});
+});
+
+
+table.setData(theSections);
+mainWindow.add(table);
+navWindow.open();
+*/
+
+
+
+
+var mainWindow = Ti.UI.createWindow();
+
+
+var listview= Ti.UI.createListView({backgroundColor:"#fff"});
+
+
+var toDo= 
+	[
+		{
+			id: "homework", 
+			name: "Homework",
+			icon: "homework.jpg"	
+		},
+		{
+			id: "Mow Lawn", 
+			name: "Mow Lawn",
+			icon: "MowLawn.jpg"	
+		},
+		{
+			id: "Clean Pool", 
+			name: "Clean Pool",
+			icon: "CleanPool.jpg"	
+		},
+		{
+			id: "Clean Garage", 
+			name: "Clean Garage",
+			icon: "CleanGarage.jpg"	
+		}
+	];
+
+
+var data = [];
+for (var i=0, j=toDo.length; i<j; i++){
+	data.push(
+	{
+		properties: 
+			{
+				itemId: toDo[i].id,
+				title: toDo[i].name, 
+				image: toDo[i].icon, 
+				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_NONE,
+				color: "black"
+			}
+	}
+	);
+};
+
+
+var listSection = Ti.UI.createListSection();
+listSection.setItems(data);
+
+listVeiew.sections = [listSections];
+
+mainWindow.add(listView);
+mainWindow.open();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
