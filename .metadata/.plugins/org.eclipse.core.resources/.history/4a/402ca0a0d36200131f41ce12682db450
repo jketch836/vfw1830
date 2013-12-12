@@ -1,0 +1,51 @@
+
+
+
+
+var win = Ti.UI.createWindow({
+	top:20,
+	layout: "horizontal"
+});
+
+var theImage = Ti.UI.createImageView({
+	image: dwarves[0]
+});
+
+
+
+var numberOfViews=4;
+
+for(var i=0; i<numberOfViews; i++){
+
+	var newView = Ti.UI.createView({
+		backgroundColor:"#333",
+		width: 100,
+		height:100,
+		top:5,
+		left:5
+	});
+	var newLabel = Ti.UI.createLabel({
+		text:i+1,
+		color: "#fff",
+		textAlign: "center"
+	});
+	newView.add(myImage);
+	win.add(newView);
+}
+
+
+start();
+win.add(theImage);
+win.open();
+
+
+
+
+
+
+
+
+
+
+
+//Images from http://www.deviantart.com/morelikethis/349114448

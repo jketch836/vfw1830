@@ -1,0 +1,47 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "#f2f2f2",
+	//layout: "horizontal"
+});
+
+
+/*
+var gallery= Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "pics");
+var folderContents = gallery.getDirectoryListing();
+
+
+for (var i=0,j=folderContents.length; i<j; i++){
+	var myImage = Ti.UI.createImageView({
+	image: "pics/" + folderContents[i]
+	});
+	//win.add(myImage);
+}
+
+
+
+
+var numberOfViews=5;
+
+for(var i=0; i<numberOfViews; i++){
+	var positionValue= 10/5;
+	var newView = Ti.UI.createView({
+		backgroundColor:"#333",
+		width: 100,
+		height:100,
+		top:positionValue,
+		left:positionValue
+	});
+	var newLabel = Ti.UI.createLabel({
+		text:i+1,
+		color: "#fff",
+		textAlign: "center"
+	});
+	newView.add(myImage);
+	win.add(newView);
+}
+
+*/
+
+
+
+
+win.open();

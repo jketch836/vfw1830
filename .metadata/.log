@@ -1060,3 +1060,35 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/jketch/.
 
 !ENTRY org.eclipse.osgi 2 1 2013-12-09 20:08:33.221
 !MESSAGE NLS missing message: NodeTitaniumSDKCommandsHandler_mobileWebBuild in: com.appcelerator.titanium.mobile.cli.messages
+!SESSION 2013-12-11 17:11:31.154 -----------------------------------------------
+eclipse.buildId=3.1.3.201309132423
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/jketch/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/jketch/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-12-11 17:11:50.941
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.osgi 2 1 2013-12-11 17:12:35.161
+!MESSAGE NLS missing message: BasicProjectCreationPage_crossPlatformWarningAndroid in: com.appcelerator.titanium.ui.wizard.messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-12-11 17:12:35.161
+!MESSAGE NLS missing message: BasicProjectCreationPage_crossPlatformWarningIOS in: com.appcelerator.titanium.ui.wizard.messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-12-11 17:31:02.683
+!MESSAGE NLS missing message: NodeTitaniumSDKCommandsHandler_mobileWebBuild in: com.appcelerator.titanium.mobile.cli.messages
+!SESSION 2013-12-11 21:06:09.024 -----------------------------------------------
+eclipse.buildId=3.1.3.201309132423
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/jketch/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/jketch/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-12-11 21:06:16.059
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.osgi 2 1 2013-12-11 21:51:56.276
+!MESSAGE NLS missing message: NodeTitaniumSDKCommandsHandler_mobileWebBuild in: com.appcelerator.titanium.mobile.cli.messages

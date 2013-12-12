@@ -1,0 +1,37 @@
+
+//Window
+Ti.UI.setBackgroundColor("white");
+
+var mWindow= Ti.UI.createWindow({
+	title: "The Hobbit",
+	//backgroundImage: "Hcover.jpg",
+	backgroundRepeat: false,
+	top: 20
+
+});
+
+
+//Label
+var viewPicsText = Ti.UI.createLabel({
+	text: "View Pictures of",
+	color: "#00000",
+	font: {fontsize: 18, fontFamily: "AmericanTypewriter"},
+	height: 40,
+	center: 0
+});
+
+
+//View
+var viewPics = Ti.UI.createView({
+	backgroundColor: "#fff",
+	borderRadius: 5,
+	height: 40,
+	top: 0
+});
+
+
+//Main Code
+mWindow.add(viewPicsText);
+mWindow.add(viewPics);
+mWindow.open();
+//var hobbit = require("clcick", 'theDwarves');

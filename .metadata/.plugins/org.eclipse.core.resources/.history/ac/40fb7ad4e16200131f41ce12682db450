@@ -1,0 +1,43 @@
+
+//Window
+Ti.UI.setBackgroundColor("white");
+
+var mWindow= Ti.UI.createWindow({
+	title: "The Hobbit",
+	backgroundImage: "Hcover.jpg",
+	backgroundRepeat: false
+
+});
+var navWindow =Ti.UI.iOS.createNavigationWindow({
+	window: mWindow
+});
+
+//Label
+var viewPicsText = Ti.UI.createLabel({
+	text: "View Pictures",
+	color: "#545454",
+	font: {fontsize: 24, fontFamily: "Arial", fontWeight: "bold"},
+	bottom: 40,
+	top: 0
+});
+
+
+//View
+var viewPics = Ti.UI.createView({
+	backgroundColor: "#fff",
+	borderRadius: 10,
+	height:30,
+	bottom: 40,
+	right: 5,
+	left: 5,
+	});
+viewPics.add(viewPicsText);
+
+
+//Main Code
+
+mWindow.add(viewPicsText);
+mWindow.add(viewPics);
+mWindow.open();
+navWindow.open();
+//var hobbit = include('theDwarves');
