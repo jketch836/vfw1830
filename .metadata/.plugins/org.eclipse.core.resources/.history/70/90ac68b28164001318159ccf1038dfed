@@ -1,0 +1,142 @@
+//Picture Gallery
+var gWin = Ti.UI.createWindow({
+	title: "The Hobbit Gallery",
+	backgroundColor: "#000",
+	orientationModes: 
+	[
+		Ti.UI.LANDSCAPE_LEFT,
+		Ti.UI.LANDSCAPE_RIGHT,
+		Ti.UI.PORTRAIT,
+		Ti.UI.UPSIDE_PORTRAIT
+	]
+//	layout: "horizontal"
+
+});
+var navWindow2 =Ti.UI.iOS.createNavigationWindow({
+	window: gWin
+});
+
+
+//Gallery
+var gallery= Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var folderContents = gallery.getDirectoryListing();
+
+
+var numberOfViews= folderContents.length;
+var platformWidth = Ti.Platform.displayCaps.platformWidth;
+var viewsPerRow = 4;
+var margin = 10;
+var totalSpace = margin*(viewsPerRow+1);
+var viewArray = [];
+
+
+//Scroll
+var viewContainer = Ti.UI.createScrollView({
+	layout:"horizontal",
+	width: Ti.UI.FILL,
+	contentWidth: 315
+});
+
+
+//Small to Big Pic
+var handle = function (){
+	// Small Pic
+	for(var i=0; i<numberOfViews; i++){
+		var newView = Ti.UI.createView({
+			backgroundColor: "#545454",
+			image: "images/" + folderContents[i],
+			title: folderContents[i],
+			font: {fontsize: 30, fontFamily: "Arial", fontWeight: "bold"},
+			width: (platformWidth/viewsPerRow) - (totalSpace/viewsPerRow),
+			height: 76,
+			top:2,
+			left:2,
+			right:2,
+			link: false,
+			child: label
+	});
+		
+		var cast = Ti.UI.createImageView({
+			image: newView.image,
+			title: newView.title,
+			width:100,
+			heigth:100,
+			link: true
+		});
+		newView.add(cast);
+		viewContainer.add(newView);
+		text: view.width = view.width;
+		view.add(label);
+		viewArray.push(view);
+		gWin.add(view);
+	}
+
+Ti.Gesture.addEventListener("orientationchange", function(){
+	alert("change Detected");
+	var platformWidth = Ti.Platform.displayCaps.platformWidth;
+	for(var i=0, j= viewArray.length; i<j; i++){
+		viewArray[i].width = (platformWidth/viewsPerRow) - (totalSpace/viewsPerRow) ;
+		viewArray[i].child.text = viewArray[i].width;
+	}
+};
+
+
+
+	//Big pic
+	viewContainer.addEventListener("click", function(event){
+		console.log(event.source.title);
+		if(event.source.link === true){	
+			var newWindow = Ti.UI.createWindow({
+				title: event.source.title,
+				backgroundColor: "8a8a8a"
+			});
+			var picView = Ti.UI.createImageView({
+				image: event.source.image,
+				borderColor:"#252525",
+				width: Ti.Platform.displayCaps.setPlatformWidth,
+				height: Ti.Platform.displayCaps.setPlatormHeight
+			});	
+
+			newWindow.add(picView);
+			navWindow2.openWindow(newWindow, {animate:true});
+		}
+	});
+
+
+//Main Menu Button
+var mainMenu = Ti.UI.createLabel({
+	text: "Back to Main Menu",
+	color: "#fff",
+	font: {fontsize: 30, fontFamily: "Arial", fontWeight: "bold"},
+	center:0
+});
+
+var viewMainMenu = Ti.UI.createView({
+	backgroundImage: "HcoverFoot.jpg",
+	height: 20,
+	bottom: 0
+	});
+viewMainMenu.add(mainMenu);
+
+viewMainMenu.addEventListener("click", function(){
+Ti.include('app.js');
+});
+
+
+
+gWin.add(viewContainer);
+//win.add(viewMainMenu);
+navWindow2.open();
+
+
+
+
+
+
+
+
+//Images from http://www.moviemarkers.net/gallery/new-character-pictures-and-production-stills-for-the-hobbit/
+//			  http://amandatolleson.deviantart.com
+//			  http://heirsofdurin.files.wordpress.com/2013/09/filmsmaug.jpg
+//			  http://cf.badassdigest.com/_uploads/images/30711/smaugoriginal__span.jpg
+//			  https://p.gr-assets.com/540x540/fit/hostedimages/1379771157/295599.jpg

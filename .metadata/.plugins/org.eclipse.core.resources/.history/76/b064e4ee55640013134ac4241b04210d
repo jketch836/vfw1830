@@ -1,0 +1,231 @@
+/*
+var window =Ti.UI.createWindow();
+
+var view = Ti.UI.createView({
+	backgroundColor: "#ff0000",
+	width: 100,
+	height: 100,
+	image: "something.jpg",
+	link: true
+});
+
+window.add(view);
+
+window.addEventListener("click", function(event){
+	if(event.source.link === true){
+		var newWin = Ti.UI.createWindow();
+		var closeWin = Ti.UI.createView({
+			height: 50
+		});
+		var WinText = Ti.UI.createLabel({
+			text: "Close",
+			color: "#fff",
+		});
+		var passedText = Ti.UI.createLabel({
+			text: event.source.image
+		});
+		closeWin.add(WinText);
+		newWin.add(closeWin, passedText);
+		newWin.open();
+		closeWin.addEventListener("click", function(){
+			WinText.open;
+				});
+	}
+		
+});
+
+
+window.open();
+
+
+
+
+var window =Ti.UI.createWindow({
+	backgroundColor: "#fff"
+});
+
+var view1 = Ti.UI.createView({
+	backgroundColor: "#123"
+});
+
+
+var view2 = Ti.UI.createView({
+	backgroundColor: "#48b"
+});
+
+
+var view3 = Ti.UI.createView({
+	backgroundColor: "#246"
+});
+
+
+var viewText1 = Ti.UI.createLabel({
+	text: "Text 1",
+	color: "#fff"
+});
+
+
+var viewText2 = Ti.UI.createLabel({
+	text: "Text 2",
+	color: "#fff"
+});
+
+
+var viewText3 = Ti.UI.createLabel({
+	text: "Text 3",
+	color: "#fff"
+});
+
+view1.add(viewText1);
+view2.add(viewText2);
+view3.add(viewText3);
+
+
+
+var viewContainer = Ti.UI.createScrollableView({
+	width: 300,
+	height:400,
+	backgroundColor:"#fff",
+	views: [view1, view2, view3],
+	showPagingControl: true,
+	pagingControlColor: "#252525"
+});
+
+
+
+window.add(viewContainer);
+window.open();
+
+
+
+
+var window =Ti.UI.createWindow({
+	backgroundColor: "#000"
+});
+
+
+var image1 = Ti.UI.createImageView({
+	image: "http://upload.wikimedia.org/wikipedia/commons/1/14/Picture_121.jpg"
+});
+
+
+var image2 = Ti.UI.createImageView({
+	image: "http://static2.businessinsider.com/image/52164eddecad04ab7000000b/this-is-the-first-picture-of-earth-from-the-moon--taken-47-years-ago.jpg"
+});
+
+
+image1View = Ti.UI.createScrollView({
+	maxZoomScale:10
+});
+
+
+image2View = Ti.UI.createScrollView({
+	maxZoomScale:10
+});
+
+image1View.add(image1);
+image2View.add(image2);
+
+
+var photos = Ti.UI.createScrollableView({
+	views:[image1View, image2View],
+	showPagingControl: true,
+	pagingControlColor: "#252525"
+});
+
+
+
+
+
+window.add(photos);
+window.open();
+
+
+
+
+
+var win =Ti.UI.createWindow({
+	layout: "horizontal",
+	backgroundColor: "#000",
+	top:20
+});
+
+
+
+var myimages = [
+"http://upload.wikimedia.org/wikipedia/commons/1/14/Picture_121.jpg",
+"http://static2.businessinsider.com/image/52164eddecad04ab7000000b/this-is-the-first-picture-of-earth-from-the-moon--taken-47-years-ago.jpg"
+
+];
+
+for(var i = 0, j= myimages.length; i<j; i++){
+	var imageView = Ti.UI.createImageView({
+		image: myimages[i],
+		width: 500,
+		height: 500
+	});
+	var view = Ti.UI.createView ({
+		width: 100,
+		height: 100,
+		right: 5,
+		bottom: 5,
+		backgroundColor: "#333"
+	});
+	view.add(imageView);
+	win.add(view);
+}
+
+win.open();
+
+*/
+
+
+var win =Ti.UI.createWindow({
+	layout: "horizontal",
+	backgroundColor: "#fff",
+	orientationModes: 
+	[
+		Ti.UI.LANDSCAPE_LEFT,
+		Ti.UI.LANDSCAPE_RIGHT,
+		Ti.UI.PORTRAIT,
+		Ti.UI.UPSIDE_PORTRAIT
+	]
+});
+
+var numberOfViews =2;
+var platformWidth = Ti.Platform.displayCaps.platformWidth;
+var viewsPerRow = 2;
+var margin = 10;
+var totalSpace = margin*(viewsPerRow+1);
+var viewArray = [];
+
+
+for(var i=0; i<numberOfViews; i++){
+	var view = Ti.UI.createView({
+		backgroundColor: "ff0000",
+		width: (platformWidth/viewsPerRow) - (totalSpace/viewsPerRow),
+		height: 100,
+		top:20,
+		left: 10,
+		child: label
+	});
+	var label =Ti.UI.createLabel({
+	text:view.width
+	});
+	view.add(label);
+	viewArray.push(view);
+	win.add(view);
+}
+
+Ti.Gesture.addEventListener("orientationchange", function(){
+	alert("change Detected");
+	var platformWidth = Ti.Platform.displayCaps.platformWidth;
+	for(var i=0, j= viewArray.length; i<j; i++){
+		viewArray[i].width = (platformWidth/viewsPerRow) - (totalSpace/viewsPerRow) ;
+		viewArray[i].child.text = viewArray[i].width;
+	}
+});
+
+win.open();
+
+

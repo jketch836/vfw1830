@@ -1,0 +1,41 @@
+//Main Window
+Ti.UI.setBackgroundColor("white");
+
+var gWin= Ti.UI.createWindow({
+	title: "Main Window",
+	backgroundImage: "Hcover.jpg",
+	backgroundRepeat: false
+
+});
+
+var navWindow1 =Ti.UI.iOS.createNavigationWindow({
+	window: gWin
+});
+
+//Label
+var viewChar = Ti.UI.createLabel({
+	text: "View Characters",
+	color: "#fff",
+	font: {fontsize: 30, fontFamily: "Arial", fontWeight: "bold"},
+	center:0
+});
+
+
+//View
+var viewPics = Ti.UI.createView({
+	backgroundImage: "HcoverFoot.jpg",
+	height: 30,
+	bottom: 0
+	});
+viewPics.add(viewChar);
+
+viewPics.addEventListener("click", function(){
+Ti.include('theDwarves.js');
+handle();
+});
+
+
+//Main Code
+gWin.add(viewPics);
+gWin.add(samplePics);
+navWindow1.open();

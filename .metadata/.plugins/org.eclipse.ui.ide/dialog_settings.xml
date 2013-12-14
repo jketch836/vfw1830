@@ -34,7 +34,7 @@
 		<item value="282" key="DIALOG_Y_ORIGIN"/>
 		<item value="354" key="DIALOG_HEIGHT"/>
 		<item value="469" key="DIALOG_X_ORIGIN"/>
-		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
 	</section>
 	<section name="com.aptana.ui.dialogs.ProjectContentsLocationArea">
 		<item value="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/day 3 lecture" key="OUTSIDE_LOCATION"/>

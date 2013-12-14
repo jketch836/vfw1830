@@ -1,0 +1,29 @@
+var window =Ti.UI.createWindow();
+
+var view = Ti.UI.createView({
+	backgroundColor: "#ff0000",
+	width: 100,
+	height: 100
+});
+
+window.add(view);
+
+window.addEventListener("click", function(event){
+	var newWin = Ti.UI.createWindow();
+	var closeWin = Ti.UI.createView({
+		height: 50
+	});
+	var WinText = Ti.UI.createLabel({
+		text: "Close",
+		color: "#fff"
+	});
+	var passedText = Ti.UI.createLabel({
+		text:event.source.image
+	});
+	closeWin.add(WinText);
+	newWin.add(closeWin, passedText);
+	newWin.open();
+});
+
+
+window.open();
