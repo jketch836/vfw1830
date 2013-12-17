@@ -44,7 +44,7 @@
 </editor>
 <editor activePart="true" focus="true" id="com.aptana.editor.js" name="bioTable.js" partName="bioTable.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/Ketcham_Josh_Project4_Practical/Resources/bioTable.js" title="bioTable.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bioTable.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="615"/>
 </editor>
 </editors>
 <views>
@@ -94,14 +94,6 @@
 </expanded>
 <selection>
 <element path="/lab1_ketcham_josh/Resources/app.js"/>
-</selection>
-</project>
-<project name="lec9">
-<expanded>
-<element path="/lec9/Resources"/>
-</expanded>
-<selection>
-<element path="/Ketcham_Josh_Project4_Practical"/>
 </selection>
 </project>
 </viewState>
