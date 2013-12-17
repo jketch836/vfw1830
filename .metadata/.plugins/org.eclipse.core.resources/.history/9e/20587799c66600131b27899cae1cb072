@@ -1,0 +1,114 @@
+//Window
+var win = Ti.UI.createWindow({
+	backgroundColor: "#333",
+	layout: "horizontal",
+	text: 'Menu',
+	font: {fontSize: 24, fontFamily: "Georgia"}
+});
+
+var navWindow1 =Ti.UI.iOS.createNavigationWindow({
+	window: win
+});
+
+
+var galleryView = Ti.UI.createView({
+	backgroundColor: "##FF0000",
+	borderRadius: 5,
+	height:50,
+	top:80,
+	left:10,
+	right:10,
+	file: 'gallery.js'
+});
+
+var galleryLabel = Ti.UI.createLabel({
+	text: "Picture Gallery",
+	font: {fontSize: 20, fontFamily: "Helvetica"},
+	color: "#000",
+	left:20
+});
+
+
+galleryView.addEventListener("click", function(event){
+	var newWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		url: event.source.file
+	});
+	newWindow.open();
+});
+
+
+
+var bioView = Ti.UI.createView({
+	backgroundColor: "#0000FF",
+	borderRadius: 5,
+	height:50,
+	top:80,
+	left:10,
+	right:10,
+	file: 'gallery.js'
+});
+
+var bioLabel = Ti.UI.createLabel({
+	text: "BioGraphy",
+	font: {fontSize: 20, fontFamily: "Helvetica"},
+	color: "#fff",
+	left:20
+});
+
+
+bioView.addEventListener("click", function(event){
+	var newWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		url: event.source.file
+	});
+	newWindow.open();
+});
+
+
+
+var customView = Ti.UI.createView({
+	backgroundColor: "#808080",
+	borderRadius: 5,
+	height:50,
+	top:80,
+	left:10,
+	right:10,
+	file: 'gallery.js'
+});
+
+var customLabel = Ti.UI.createLabel({
+	text: "Custom ______",
+	font: {fontSize: 20, fontFamily: "Helvetica"},
+	color: "#fff",
+	left:20
+});
+
+
+customView.addEventListener("click", function(event){
+	var newWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		url: event.source.file
+	});
+	newWindow.open();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+customView.add(customLabel);
+bioView.add(bioLabel);
+galleryView.add(galleryLabel);
+win.add(customView);
+win.add(bioView);
+win.add(galleryView);
+win.open();

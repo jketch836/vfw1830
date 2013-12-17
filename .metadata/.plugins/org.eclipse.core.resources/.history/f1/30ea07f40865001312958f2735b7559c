@@ -1,0 +1,42 @@
+var win =Ti.UI.createWindow({
+	layout: "horizontal",
+	backgroundColor: "#fff",
+});
+
+var slider = Titanium.UI.createSlider({
+    top: 50,
+    min: 0,
+    max: 100,
+    width: '100%',
+    value: 50
+    });
+    
+var label = Ti.UI.createLabel({
+    text: slider.value,
+    width: '100%',
+    height: 'auto',
+    top: 30,
+    left: 0,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+    });
+
+slider.addEventListener('change', function(e) {
+    label.text = String.format("%3.1f", e.value);
+});
+
+win.add(label);
+win.add(slider);
+win.open();
+//navWindow2.open();
+
+
+
+
+
+
+
+//Images from http://www.moviemarkers.net/gallery/new-character-pictures-and-production-stills-for-the-hobbit/
+//			  http://amandatolleson.deviantart.com
+//			  http://heirsofdurin.files.wordpress.com/2013/09/filmsmaug.jpg
+//			  http://cf.badassdigest.com/_uploads/images/30711/smaugoriginal__span.jpg
+//			  https://p.gr-assets.com/540x540/fit/hostedimages/1379771157/295599.jpg

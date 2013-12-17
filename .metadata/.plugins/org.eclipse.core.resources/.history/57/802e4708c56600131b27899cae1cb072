@@ -1,0 +1,37 @@
+
+var win = Ti.UI.createWindow({
+	backgroundColor: "#333",
+	layout: "horizontal"
+});
+
+var newView = Ti.UI.createView({
+	backgroundColor: "#fff",
+	height:100,
+	top:40,
+	left:10,
+	right:10,
+	file: 'gallery.js'
+});
+
+var newLabel = Ti.UI.createLabel({
+	text: "Picture Gallery",
+	font: {fontSize: 24, fontFamily: "Helvetica"},
+	color: "#333",
+	left:20
+});
+
+
+newView.addEventListener("click", function(event){
+	var newWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		url: event.source.file,
+		ref:newLabel.text
+	});
+	newWindow.open();
+});
+
+
+
+newView.add(newLabel);
+win.add(newView);
+win.open();

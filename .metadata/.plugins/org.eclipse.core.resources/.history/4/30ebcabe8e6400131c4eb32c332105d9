@@ -1,0 +1,46 @@
+var win =Ti.UI.createWindow({
+	layout: "horizontal",
+	backgroundColor: "#fff",
+	orientationModes: 
+	[
+		Ti.UI.LANDSCAPE_LEFT,
+		Ti.UI.LANDSCAPE_RIGHT,
+		Ti.UI.PORTRAIT,
+		Ti.UI.UPSIDE_PORTRAIT
+	]
+});
+
+var numberOfViews =5;
+var platformWidth = Ti.Platform.displayCaps.platformWidth;
+var viewsPerRow = 4;
+var margin = 2;
+var totalSpace = margin*(viewsPerRow+1);
+var viewArray = [];
+
+
+for(var i=0; i<numberOfViews; i++){
+	var label =Ti.UI.createLabel({
+	});
+	var view = Ti.UI.createView({
+		backgroundColor: "ff0000",
+		width: (platformWidth/viewsPerRow) - (totalSpace/viewsPerRow),
+		height: 100,
+		top:20,
+		left: 10,
+		child: label
+	});
+	text: view.width = view.width;
+	view.add(label);
+	viewArray.push(view);
+	win.add(view);
+}
+
+Ti.Gesture.addEventListener("orientationchange", function(){
+	var platformWidth = Ti.Platform.displayCaps.platformWidth;
+	for(var i=0, j= viewArray.length; i<j; i++){
+		viewArray[i].width = (platformWidth/viewsPerRow) - (totalSpace/viewsPerRow) ;
+		viewArray[i].child.text = viewArray[i].width;
+	}
+});
+
+win.open();

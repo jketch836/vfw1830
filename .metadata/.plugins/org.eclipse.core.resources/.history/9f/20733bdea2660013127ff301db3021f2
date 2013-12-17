@@ -1,0 +1,6 @@
+var currentWindow = Ti.UI.currentWindow;
+var windowLabel = Ti.UI.createLabel({
+	text: "New Window",
+	color: "#333"
+	});
+	currentWindow.add(windowLabel);

@@ -1,0 +1,44 @@
+var menuWindow = Ti.UI.currentWindow;
+
+var houseData =
+{
+		"Stark":
+	{
+		"houseRow": 
+			[
+				{
+					title:"Eddard 'Ned' Stark", 
+					info: "Eddard 'Ned' Stark was the head of the House Stark. He was considered by many to be an honest, honorable man. However he was behead by King Jofferry Baratheon for the crime of treason.",
+					housePicture: "Stark.jpg"
+				}
+			]
+	
+	},
+		"Lannister":
+	{
+		"houseRow": 
+			[
+				{
+					title: "Tywin Lannister", 
+			 		info: "Tywin Lannister is the lord of House Lannister, the Lord Paramount of the Westerlands, and the richest man in the Seven Kingdoms. He married Joanna Lannister and their first children were the fraternal twins Cersei and Jaime. She died after giving birth to Tyrion.",
+					housePicture: "Lannister.jpg"
+
+				}
+			]
+	},
+		"Targaryen":
+	{
+		"houseRow": 
+			[
+				{
+					title:"Danery's Targaryen", 
+					info: ".",
+					housePicture: "Stark.jpg"
+				}
+			]
+	
+	},
+};
+
+
+menuWindow.add(gLabel);

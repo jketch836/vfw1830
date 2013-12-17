@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench version="2.0">
 <workbenchAdvisor/>
-<window height="878" width="1200" x="80" y="22">
+<window height="878" width="1200" x="107" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -28,29 +28,23 @@
 </coolbarLayout>
 <page focus="true" label="Workspace - Studio">
 <editors>
-<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@c65006">
+<editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-</presentation>
-</folder>
-</info>
-<info part="org.eclipse.ui.internal.EditorStack@c65006" ratio="0.5" ratioLeft="583" ratioRight="583" relationship="2" relative="DefaultEditorWorkbook">
-<folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/Ketcham_Josh_Project3/Resources/app.js" title="app.js" tooltip="Ketcham_Josh_Project3/Resources/app.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Ketcham_Josh_Project3/Resources/app.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1132" selectionTopPixel="616"/>
+<editor id="com.aptana.editor.js" name="launchPage.js" partName="launchPage.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/Ketcham_Josh_Project4_Practical/Resources/launchPage.js" title="launchPage.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/launchPage.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Ketcham_Josh_Project4_Practical/Resources/launchPage.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="com.aptana.editor.js" name="theDwarves.js" partName="theDwarves.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/Ketcham_Josh_Project3/Resources/theDwarves.js" title="theDwarves.js" tooltip="Ketcham_Josh_Project3/Resources/theDwarves.js" workbook="org.eclipse.ui.internal.EditorStack@c65006">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Ketcham_Josh_Project3/Resources/theDwarves.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="99" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="com.aptana.editor.js" name="bioTable.js" partName="bioTable.js" path="/Users/jketch/Documents/Full_Sail/vfw1830-projects/Ketcham_Josh_Project4_Practical/Resources/bioTable.js" title="bioTable.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bioTable.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -61,13 +55,13 @@
 <viewState/>
 </view>
 <view id="com.aptana.explorer.view" partName="App Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="Ketcham_Josh_Project3">
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="Ketcham_Josh_Project4_Practical">
 <project name="Ketcham_Josh_Project1">
 <expanded>
 <element path="/Ketcham_Josh_Project1/Resources"/>
 </expanded>
 <selection>
-<element path="/Ketcham_Josh_Project1/Resources/ArrayDisplayView.js"/>
+<element path="/Ketcham_Josh_Project1/Resources/app.js"/>
 </selection>
 </project>
 <project name="Ketcham_Josh_Project2">
@@ -84,7 +78,14 @@
 </expanded>
 <selection>
 <element path="/Ketcham_Josh_Project3/Resources/app.js"/>
-<element path="/Ketcham_Josh_Project3/Resources/theDwarves.js"/>
+</selection>
+</project>
+<project name="Ketcham_Josh_Project4_Practical">
+<expanded>
+<element path="/Ketcham_Josh_Project4_Practical/Resources"/>
+</expanded>
+<selection>
+<element path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
 </selection>
 </project>
 <project name="lab1_ketcham_josh">
@@ -95,13 +96,18 @@
 <element path="/lab1_ketcham_josh/Resources/app.js"/>
 </selection>
 </project>
+<project name="lec9">
+<expanded>
+<element path="/lec9/Resources"/>
+</expanded>
+<selection>
+<element path="/Ketcham_Josh_Project4_Practical"/>
+</selection>
+</project>
 </viewState>
 </view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 </views>
-<perspectives activePart="com.aptana.explorer.view" activePerspective="com.appcelerator.titanium.ui.StudioPerspective">
+<perspectives activePart="com.aptana.editor.js" activePerspective="com.appcelerator.titanium.ui.StudioPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.appcelerator.titanium.ui.perspectives.TitaniumStudioPerspectiveFactory" id="com.appcelerator.titanium.ui.StudioPerspective" label="Studio"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -137,20 +143,21 @@
 <view id="com.aptana.explorer.view"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="1024" id="terminalArea" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@13e49c2" orientation="512" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29886508"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="16384" id="bottomLeft" orientation="256" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.29845625"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
 <layout>
 <mainWindow>
-<info folder="true" part="leftArea">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@13e49c2">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="leftArea" ratio="0.24957119" ratioLeft="291" ratioRight="875" relationship="2" relative="org.eclipse.ui.internal.ViewStack@13e49c2">
 <folder activePageID="com.aptana.explorer.view" appearance="2" expanded="2">
 <page content="com.aptana.explorer.view" label="App Explorer"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
@@ -170,8 +177,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.19966443" ratioLeft="238" ratioRight="954" relationship="2" relative="leftArea"/>
 <info folder="true" part="terminalArea" ratio="0.7392405" ratioLeft="584" ratioRight="206" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<folder appearance="2" expanded="2">
 <page content="com.aptana.terminal.views.terminal:*" label="LabelNotFound"/>
 <page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
@@ -182,7 +188,7 @@
 </folder>
 </info>
 <info folder="true" part="bottomLeft" ratio="0.74939173" ratioLeft="616" ratioRight="206" relationship="4" relative="leftArea">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="com.aptana.samples.ui.SamplesView" label="LabelNotFound"/>
 <page content="com.aptana.snippets.ui.views.SnippetsView" label="LabelNotFound"/>
@@ -196,160 +202,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project3/Resources/theDwarves.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project3/Resources/app.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/lec8/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project4_Practical/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project4_Practical/Resources/gallery.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project2/Resources/HouseMembers.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project2/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project2/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project3/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project4_Practical/Resources/launchPage.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project1/Resources/app.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
 </editors>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="58" y="0"/>
+<item historyLabel="app.js" index="0">
+<position info="not_deleted" x="1269" y="0"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
+<item historyLabel="gallery.js" index="1">
+<position info="not_deleted" x="621" y="13"/>
 </item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1559" y="0"/>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="1066" y="0"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
+<item historyLabel="gallery.js" index="1">
+<position info="not_deleted" x="621" y="13"/>
 </item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1088" y="0"/>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="1175" y="0"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="4">
+<position info="not_deleted" x="149" y="86"/>
 </item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1559" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="785" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
-</item>
-<item historyLabel="app.js | lec8" index="2">
-<position info="not_deleted" x="2927" y="116"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
-</item>
-<item historyLabel="app.js | lec8" index="2">
-<position info="not_deleted" x="3049" y="857"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="881" y="0"/>
-</item>
-<item historyLabel="app.js | lec8" index="2">
-<position info="not_deleted" x="3298" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="1144" y="0"/>
-</item>
-<item historyLabel="app.js | lec8" index="2">
-<position info="not_deleted" x="3266" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="665" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
-</item>
-<item historyLabel="app.js | lec8" index="2">
-<position info="not_deleted" x="3229" y="0"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="785" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="899" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="187" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="2073" y="0"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1248" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="1652" y="0"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="228" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="415" y="0"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="109" y="0"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1386" y="101"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="108" y="0"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1089" y="0"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1386" y="101"/>
-</item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="102" y="0"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1386" y="101"/>
-</item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1218" y="10"/>
-</item>
-<item historyLabel="app.js | Ketcham_Josh_Project2" index="3">
+<item historyLabel="HouseMembers.js" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1519" y="0"/>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="4">
+<position info="not_deleted" x="149" y="86"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="2298" y="0"/>
 </item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1174" y="0"/>
+<item historyLabel="HouseMembers.js" index="3">
+<position info="not_deleted" x="3020" y="552"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="1742" y="0"/>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="2230" y="0"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
+<item historyLabel="HouseMembers.js" index="3">
+<position info="not_deleted" x="2994" y="1099"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position/>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="4">
+<position info="not_deleted" x="149" y="86"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="1140" y="0"/>
+<item historyLabel="gallery.js" index="1">
+<position info="not_deleted" x="621" y="13"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="504" y="0"/>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="1302" y="0"/>
 </item>
-<item historyLabel="app.js | lec8" index="2">
-<position info="not_deleted" x="3229" y="0"/>
+<item historyLabel="gallery.js" index="1">
+<position info="not_deleted" x="621" y="13"/>
 </item>
-<item historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="504" y="0"/>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="1863" y="0"/>
 </item>
-<item historyLabel="app.js" index="1">
-<position info="not_deleted" x="1132" y="0"/>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="4">
+<position info="not_deleted" x="149" y="86"/>
 </item>
-<item active="true" historyLabel="theDwarves.js" index="0">
-<position info="not_deleted" x="948" y="0"/>
+<item historyLabel="HouseMembers.js" index="3">
+<position info="not_deleted" x="4095" y="34"/>
+</item>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="1737" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="4">
+<position info="not_deleted" x="149" y="86"/>
+</item>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="1737" y="0"/>
+</item>
+<item historyLabel="HouseMembers.js" index="3">
+<position info="not_deleted" x="4095" y="34"/>
+</item>
+<item historyLabel="bioTable.js" index="2">
+<position info="not_deleted" x="1737" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="269" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project3" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="1748" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project1" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project3" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="1748" y="0"/>
+</item>
+<item historyLabel="bioTable.js" index="9">
+<position info="not_deleted" x="1737" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="1748" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="1748" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project3" index="6">
+<position info="not_deleted" x="1489" y="33"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="307" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="924" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="324" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="1748" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project4_Practical" index="0">
+<position info="not_deleted" x="269" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="1748" y="0"/>
+</item>
+<item historyLabel="app.js | Ketcham_Josh_Project2" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="launchPage.js" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="bioTable.js" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -358,8 +370,7 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="leftArea"/>
-<trimItem IMemento.internal.id="bottomLeft"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@13e49c2"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -369,52 +380,51 @@
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
 <trimItem IMemento.internal.id="com.appcelerator.ui.trim"/>
-<trimItem IMemento.internal.id="terminalArea"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project2/Resources/app.js">
-<persistable path="/Ketcham_Josh_Project2/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="ArrayDisplayView.js" tooltip="Ketcham_Josh_Project1/Resources/ArrayDisplayView.js">
-<persistable path="/Ketcham_Josh_Project1/Resources/ArrayDisplayView.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="HouseMembers.js" tooltip="Ketcham_Josh_Project2/Resources/HouseMembers.js">
-<persistable path="/Ketcham_Josh_Project2/Resources/HouseMembers.js"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="imageViewer.js" tooltip="/Volumes/NOTITIA/imageViewer.js">
-<persistable uri="file:/Volumes/NOTITIA/imageViewer.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lab1_ketcham_josh/Resources/app.js">
-<persistable path="/lab1_ketcham_josh/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/vfw_labs/lab1_ketcham_josh/Resources/app.js">
-<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/vfw_labs/lab1_ketcham_josh/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="lec8/tiapp.xml">
-<persistable path="/lec8/tiapp.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lec8/Resources/app.js">
-<persistable path="/lec8/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="theDwarves.js" tooltip="Ketcham_Josh_Project3/Resources/theDwarves.js">
-<persistable path="/Ketcham_Josh_Project3/Resources/theDwarves.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project3/Resources/app.js">
-<persistable path="/Ketcham_Josh_Project3/Resources/app.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="bioTable.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bioTable.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project1/Resources/app.js">
 <persistable path="/Ketcham_Josh_Project1/Resources/app.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lec7/Resources/app.js">
-<persistable path="/lec7/Resources/app.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="launchPage.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/launchPage.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/launchPage.js"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/lec4 TableViews:TableViewSections:TableViewRows:InteractiveTables:NavWindow/Resources/app.js">
-<persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/lec4%20TableViews:TableViewSections:TableViewRows:InteractiveTables:NavWindow/Resources/app.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project3/Resources/app.js">
+<persistable path="/Ketcham_Josh_Project3/Resources/app.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="RScovers.js" tooltip="Ketcham_Josh_Project3/Resources/RScovers.js">
-<persistable path="/Ketcham_Josh_Project3/Resources/RScovers.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project2/Resources/app.js">
+<persistable path="/Ketcham_Josh_Project2/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="HouseMembers.js" tooltip="Ketcham_Josh_Project2/Resources/HouseMembers.js">
+<persistable path="/Ketcham_Josh_Project2/Resources/HouseMembers.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="gallery.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/gallery.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/gallery.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="theDwarves.js" tooltip="Ketcham_Josh_Project3/Resources/theDwarves.js">
+<persistable path="/Ketcham_Josh_Project3/Resources/theDwarves.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lec9/Resources/app.js">
+<persistable path="/lec9/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="newWindow.js" tooltip="lec9/Resources/newWindow.js">
+<persistable path="/lec9/Resources/newWindow.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="Ketcham_Josh_Project4_Practical/tiapp.xml">
+<persistable path="/Ketcham_Josh_Project4_Practical/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/app.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/app.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.appcelerator.titanium.ui.ide.tiappEditor" name="tiapp.xml" tooltip="lec9/tiapp.xml">
+<persistable path="/lec9/tiapp.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="finalProject/Resources/app.js">
+<persistable path="/finalProject/Resources/app.js"/>
 </file>
 </mruList>
 </workbench>

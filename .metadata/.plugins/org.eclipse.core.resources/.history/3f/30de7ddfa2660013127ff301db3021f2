@@ -1,0 +1,35 @@
+var win = Ti.UI.createWindow({
+	backgroundColor: "#333",
+	layout: "horizontal"
+});
+
+var newView = Ti.UI.createView({
+	backgroundColor: "#fff",
+	height:100,
+	top:40,
+	left:10,
+	right:10
+});
+
+var newLabel = Ti.UI.createLabel({
+	text: "Some Menu Item",
+	font: {fontSize: 24, fontFamily: "Helvetica"},
+	color: "#333",
+	left:20
+});
+
+var openItem = function(){
+	var newWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		url:"newWindow.js"
+	});
+	newWindow.open();
+};
+
+newView.addEventListener("click", openItem);
+
+
+
+newView.add(newLabel);
+win.add(newView);
+win.open();

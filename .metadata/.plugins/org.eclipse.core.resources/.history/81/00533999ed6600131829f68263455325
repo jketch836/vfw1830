@@ -1,0 +1,20 @@
+//Window
+var mWin = Ti.UI.createWindow({
+	backgroundImage:'westros.jpg',
+	layout: "horizontal",
+	title: "Menu",
+	font: {fontSize: 24, fontFamily: "Georgia", fontColor: "FF0000", fontWeight: "bold"}
+});
+
+var navWin1 =Ti.UI.iOS.createNavigationWindow({
+	window: mWin
+});
+
+
+var data = require('launchPage');
+
+//Main Code
+mWin.add(galleryView);
+mWin.add(bioView);
+mWin.add(customView);
+navWin1.open();

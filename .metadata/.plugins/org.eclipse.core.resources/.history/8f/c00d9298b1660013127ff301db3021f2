@@ -1,0 +1,103 @@
+// 
+// var win = Ti.UI.createWindow({
+	// backgroundColor: "#333",
+	// layout: "horizontal"
+// });
+// 
+// var newView = Ti.UI.createView({
+	// backgroundColor: "#fff",
+	// height:100,
+	// top:40,
+	// left:10,
+	// right:10,
+	// file: 'newWindow.js'
+// });
+// 
+// var newLabel = Ti.UI.createLabel({
+	// text: "Some Menu Item",
+	// font: {fontSize: 24, fontFamily: "Helvetica"},
+	// color: "#333",
+	// left:20
+// });
+// 
+// 
+// newView.addEventListener("click", function(event){
+	// var newWindow = Ti.UI.createWindow({
+		// backgroundColor: "#fff",
+		// url: event.source.file,
+		// ref:newLabel.text
+	// });
+	// newWindow.open();
+// });
+// 
+// 
+// 
+// newView.add(newLabel);
+// win.add(newView);
+// win.open();
+
+
+
+var win = Ti.UI.createWindow({
+
+});
+
+
+var testamonialData = [
+	{img: 'Unknown.jpeg', text: "bar seven five, 'large king', hyatt's"},
+	{img: 'Unknown.jpeg', text: "nice place"},
+	{img: 'Unknown.jpeg', text: "service sucked"},
+	{},
+	{},
+];
+
+var scrollableViews = [];
+
+
+for (var i=0; i < testamonialData.length; i++){
+	var newTestView = Ti.UI.createView({
+	backgroundImage: testamonialData[i]
+});
+
+var labelViewWarp = Ti.UI.createLabel({
+	backgroundColor: "#000",
+	opacity: .7,
+	bottom:0,
+	height: 70,
+	layout:"vertical"
+});
+var testimonailTextTitle = Ti.UI.createLabel({
+	text: "PEOPLE TALK ABOUT",
+	font: {fontSize: 6, fontfamily: "Arial"},
+	top: 150,
+	color: "#fff",
+	textAlign: "center",
+	bottom: 5
+});
+
+var testimonailText = Ti.UI.createLabel({
+	text: testamonialData[i].text,
+	font: {fontSize: 12, fontfamily: "Arial"},
+	bottom: 3,
+	color: "#fff",
+	textAlign: "center"
+});
+labelViewWarp.add(testimonailTextTitle, testimonailText);
+scrollableViews.push(labelViewWarp);
+};
+
+
+var testamonials = Ti.UI.createScrollableView({
+	showPagingControl: true,
+	veiws: scrollableViews[i],
+	top: 0
+	//pagingControlAlpha: 0
+});
+
+
+
+
+
+win.add(scrollableViews);
+win.add(testamonials);
+win.open();

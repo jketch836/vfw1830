@@ -1,0 +1,26 @@
+var win = Ti.UI.createWindow();
+// Use a NavigationWindow to create a navigation bar for the window
+var navWin = Ti.UI.iOS.createNavigationWindow({window: win});
+
+var navButton = Titanium.UI.createButton({title:'Launch'});
+win.RightNavButton = navButton;
+
+var winButton = Titanium.UI.createButton({
+    title:'Launch',
+    height:40,
+    width:200,
+    top:270
+});
+win.add(winButton);
+
+// Create a document viewer to preview a PDF file
+docViewer = Ti.UI.iOS.createDocumentViewer({url:'Example.pdf'});
+// Opens the options menu and when the user clicks on 'Quick Look'
+// the document viewer launches with an animated transition
+navButton.addEventListener('click', function(){
+    docViewer.show({view:navButton, animated: true});
+});
+// The document viewer immediately launches without an animation
+winButton.addEventListener('click', function(){docViewer.show()});
+
+navWin.open();
