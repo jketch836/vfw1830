@@ -1,0 +1,154 @@
+var cWin = Ti.UI.currentWindow;
+
+var noPointWin = Ti.UI.createWindow({
+  backgroundColor: "#fff"
+});
+
+
+var style = Ti.UI.iPhone.ActivityIndicatorStyle.DARK;
+
+var theIndicator = Ti.UI.createActivityIndicator({
+	color: 'black',
+	font: {fontSize: 22, fontFamily: "AmericanTypewriter", fontWeight: "bold"},
+	message: 'Showing House History....',
+	style:style,
+	center: 0,
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+});
+noPointWin.add(theIndicator);
+
+noPointWin.addEventListener('open', function (e) {
+  theIndicator.show();
+  setTimeout(function(){
+    e.source.close();
+    theIndicator.hide();
+  }, 2000);
+});
+
+
+var bar1 = Titanium.UI.createButtonBar({
+    labels:['Stark', 'Lannister'],
+    backgroundColor:'#fff',
+    top:10,
+    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+    height:25,
+    width:175
+});
+
+bar1.addEventListener('click', function(kingdom){
+//House Windows
+	if(kingdom.index === 0){
+		var starkWin = Ti.UI.createWindow({
+			title: 'House Stark',
+			font: {fontSize: 18, fontFamily: "AmericanTypewriter"},
+			backgroundImage: "new/stark.png",
+			backgroundColor: "#fff"
+		});	
+		
+		var starkView = Ti.UI.createView({
+			backgroundColor: '#fff',
+			height: Ti.UI.SIZE,
+			bottom: 80,
+			opacity: .7
+		});
+		
+		var starkLabel = Ti.UI.createLabel({
+			text: "You have chosen House Stark! Read the books to find out their fate! Don't watch the TV show.",
+			font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
+		});
+		
+			//Sample View
+			var nedPic = Ti.UI.createView({
+				backgroundColor: "#000"
+			});
+			
+			var catPic = Ti.UI.createView({
+				backgroundColor: "#000"
+			});
+			
+			var robbPic = Ti.UI.createView({
+				backgroundColor: "#000"
+			});
+			
+			var ned = Ti.UI.createImageView({
+				image: "new/NedStark.jpg",
+				height:150,
+				width: 200
+			});
+			
+			var cat = Ti.UI.createImageView({
+				image: "new/CatStark.jpg",
+				height:150,
+				width: 200
+			});
+			
+			var robb = Ti.UI.createImageView({
+				image: "new/robb3.jpg",
+				height:Ti.UI.FIT,
+				backgroundColor: "#625f66"
+			});
+			
+			
+			nedPic.add(ned);
+			catPic.add(cat);
+			robbPic.add(robb);
+			
+			
+			var starkPics = Ti.UI.createScrollableView({
+				width: 130,
+				height: 130,
+				top: 133,
+				backgroundColor:"#fff",
+				views: [nedPic, catPic, robbPic],
+				showPagingControl: true,
+				pagingControlColor: "#252525"
+			});
+		starkView.add(starkLabel);
+		starkWin.add(starkView, starkPics);
+		cWin.nav.openWindow(starkWin);
+		
+	}else if(kingdom.index === 1){
+	//House Views
+	var lannWin = Ti.UI.createWindow({
+		title: 'House Lannister',
+		font: {fontSize: 18, fontFamily: "AmericanTypewriter"},
+		backgroundImage: "new/lannister.png",
+		backgroundColor: "#fff"
+	});	
+	
+	var lannView = Ti.UI.createView({
+		backgroundColor: '#fff',
+		height: Ti.UI.SIZE,
+		bottom: 100,
+		opacity: .7
+	});
+
+	var lannLabel = Ti.UI.createLabel({
+		text: "You have chosen House Lannister! Read the books to find out their fate! Don't watch the TV show.",
+		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"}
+	});
+	lannView.add(lannLabel);
+	lannWin.add(lannView);
+	cWin.nav.openWindow(lannWin, {animate: true});
+};
+});
+
+
+var controlView = Ti.UI.createView({
+	backgroundColor: '#fff',
+	height: Ti.UI.SIZE,
+	bottom: 0
+	});
+		
+var controlLabel = Ti.UI.createLabel({
+	text: '* ActivityIndicator and BarButton Ti.UI Control were used in the making of this app',
+	font: {fontSize: 6, fontFamily: "AmericanTypewriter", fontColor: "#000"},
+	});
+	controlView.add(controlLabel);
+	cWin.add(controlView);
+
+
+
+cWin.add(bar1);
+cWin.nav.openWindow(noPointWin, {animate: true});

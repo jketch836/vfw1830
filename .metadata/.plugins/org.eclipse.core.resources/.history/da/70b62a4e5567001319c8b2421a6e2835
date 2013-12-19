@@ -1,0 +1,115 @@
+var galleryView = Ti.UI.createView({
+	backgroundColor: "#FF0000",
+	borderRadius: 10,
+	height:50,
+	top:20,
+	left:10,
+	right:10,
+	file: 'gallery.js'
+});
+
+var galleryLabel = Ti.UI.createLabel({
+	text: "Picture Gallery",
+	font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#000",
+	left:20
+});
+galleryView.add(galleryLabel);
+
+galleryView.addEventListener("click", function(event){
+	var gWin = Ti.UI.createWindow({
+		backgroundColor: "#FF0000",
+		//layout: "horizontal",
+		text: 'Gallery',
+		font: {fontSize: 24, fontFamily: "Georgia"},
+		url: event.source.file
+	});
+	navWin1.openWindow(gWin, {animate:true});
+});
+
+
+
+var bioView = Ti.UI.createView({
+	backgroundColor: "#FFD700",
+	borderRadius: 10,
+	height:50,
+	top:30,
+	left:10,
+	right:10,
+	file: 'bioTable.js'
+});
+
+var bioLabel = Ti.UI.createLabel({
+	text: "BioGraphy",
+	font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#000",
+	left:20
+});
+bioView.add(bioLabel);
+
+bioView.addEventListener("click", function(event){
+	var bioWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		url: event.source.file
+	});
+	navWin1.openWindow(bioWindow, {animate:true});
+});
+
+
+
+var customView = Ti.UI.createView({
+	backgroundColor: "#808080",
+	borderRadius: 10,
+	height:50,
+	top:30,
+	bottom: 150,
+	left:10,
+	right:10,
+	file: 'custom.js'
+});
+
+var customLabel = Ti.UI.createLabel({
+	text: "Custom ______",
+	font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#fff",
+	left:20
+});
+customView.add(customLabel);
+
+customView.addEventListener("click", function(event){
+	var newWindow = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		url: event.source.file
+	});
+});
+
+
+
+var courseNumView = Ti.UI.createView({
+	backgroundColor: "#808080",
+	borderRadius: 10,
+	height:75,
+	width: Ti.UI.setWidth,
+	bottom:0
+});
+
+var courseNumLabel = Ti.UI.createLabel({
+	text: "Josh Ketcham  VFW 1312",
+	font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#fff",
+	center:0
+});
+courseNumView.add(courseNumLabel);
+
+
+
+
+
+
+
+
+
+mWin.add(galleryView);
+mWin.add(bioView);
+mWin.add(customView);
+mWin.add(courseNumView);

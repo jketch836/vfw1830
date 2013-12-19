@@ -1,21 +1,21 @@
-var menuWindow = Ti.UI.currentWindow;
-
+//Window
+var cWin = Ti.UI.currentWindow;
+var notI;
 
 //Next Image Button
 var newImageView = Ti.UI.createView({
-	backgroundColor: "#fff",
+	backgroundColor: "#252525",
 	borderRadius: 5,
-	height:40,
-	bottom:20,
+	height:60,
+	bottom:0,
 	left:5,
-	right:5,
-	zIndex:10
+	right:5
 });
 
 var newImageLabel = Ti.UI.createLabel({
 	text: "Next Image",
 	font: {fontSize: 20, fontFamily: "Helvetica", fontWeight: "bold"},
-	color: "#000",
+	color: "#fff",
 	center:0
 });
 newImageView.add(newImageLabel);
@@ -26,32 +26,26 @@ var gallery= Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "profilePic
 var folderContents = gallery.getDirectoryListing();
 
 
-//image
-var j = 10;
-
+//Pics
 var imageView = Ti.UI.createImageView({
 			image: "profilePic/" + folderContents[4],
 			width: Ti.UI.SIZE / 2,
 			height: 300,
-			top: 10,
-			zIndex:20
-		});
-
-
-
-	//Show pic
+			top: 10
+	});
+//	imageView.push(imageArray);
+//Randomize Pics
 	newImageView.addEventListener("click", function(){
-		var i = Math.floor(Math.random() * 10);
+		var i = Math.floor(Math.random() * folderContents.length);
 		
-		while(i === notI){
-			i = Math.floor(Math.random() * folderContents.length);
+		while(notI === i){
+		var i = Math.floor(Math.random(imageView.image) * folderContents.length);
 			};
-				var notI = i;
-				imageView.image = "profilePic/" + folderContents[i];
+		imageView.image = "profilePic/" + folderContents[i];
+		notI = i;
 	});
 
 
 
-
-menuWindow.add(newImageView);
-menuWindow.add(imageView);
+cWin.add(newImageView);
+cWin.add(imageView);

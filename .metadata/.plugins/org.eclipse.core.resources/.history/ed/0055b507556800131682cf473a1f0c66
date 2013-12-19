@@ -1,0 +1,54 @@
+var cWin = Ti.UI.currentWindow;
+
+var noPointWin = Ti.UI.createWindow({
+  backgroundColor: "#fff"
+});
+
+var starkView = Ti.UI.createView({
+	backgroundImage: "new/stark.png",
+	height: Ti.UI.FIT,
+});
+
+var starkLabel = Ti.UI.createLabel({
+	text: 'You have chosen House Stark! Congradulations!!!. If you do not sense my sarcasm read the books, it will become clear to you.',
+	bottom: 40
+});
+starkView.add(starkLabel);
+
+
+var lannView = Ti.UI.createView({
+	backgroundImage: "new/lannister.png",
+	height: Ti.UI.FIT,
+});
+
+var lannLabel = Ti.UI.createLabel({
+	text: "You have chosen House Lannister! Congradulations!!!. You are wise and rich beyond your dreams. Don't spend it all at the Tavern."
+});
+lannView.add(lannLabel);
+
+
+var style = Ti.UI.iPhone.ActivityIndicatorStyle.DARK;
+
+var theIndicator = Ti.UI.createActivityIndicator({
+	color: 'black',
+	font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
+	message: 'Loading...',
+	style:style,
+	center: 0,
+	height:Ti.UI.SIZE,
+	width:Ti.UI.SIZE
+});
+
+noPointWin.add(theIndicator);
+
+noPointWin.addEventListener('open', function (e) {
+  theIndicator.show();
+  
+  setTimeout(function(){
+    e.source.close();
+    theIndicator.hide();
+  }, 2000);
+});
+
+cWin.add(starkView);
+cWin.nav.openWindow(noPointWin, {animate: true});

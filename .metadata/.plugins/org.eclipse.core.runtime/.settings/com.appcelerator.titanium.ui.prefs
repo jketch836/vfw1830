@@ -1,8 +1,10 @@
 Android\ Emulator\ Process\:ConsoleLogLevel=Info
+FastDev\ Process\:ConsoleLogLevel=Info
 Ketcham_Josh_Project3\:ConsoleLogLevel=Debug
-LAST_LAUNCH_TIMESTAMP=1387305715989
+Ketcham_Josh_Project4_Practical\:ConsoleLogLevel=Debug
+LAST_LAUNCH_TIMESTAMP=1387416399472
 eclipse.preferences.version=1
-iOS\ build\ and\ deploy\:ConsoleLogLevel=Info
+iOS\ build\ and\ deploy\:ConsoleLogLevel=Debug
 preference.show.console.onError=true
 preference.studio.perspective.toolbar.visible=true
 preference.studio.perspective.version=102

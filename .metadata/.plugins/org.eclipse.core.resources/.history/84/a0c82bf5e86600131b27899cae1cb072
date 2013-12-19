@@ -1,9 +1,0 @@
-var menuWindow = Ti.UI.currentWindow;
-
-var gLabel = Ti.UI.createLabel({
-	title: menuWindow.ref,
-	color: "#000"
-});
-
-
-menuWindow.add(gLabel);
