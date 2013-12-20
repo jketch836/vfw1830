@@ -1,0 +1,130 @@
+//Window
+var mWin = Ti.UI.createWindow({
+	backgroundImage:'westros.jpg',
+	layout: "horizontal",
+	title: "GoT Menu",
+	font: {fontSize: 24, fontFamily: "Georgia", fontWeight: "bold"}
+});
+
+var navWin1 =Ti.UI.iOS.createNavigationWindow({
+	window: mWin
+});
+
+//Views and Labels
+	//GalleryView
+var galleryView = Ti.UI.createView({
+	backgroundImage: "edited/The_Iron_Throne_crop.jpg",
+	borderRadius: 10,
+	opacity: .7,
+	height:50,
+	top:40,
+	left:10,
+	right:10,
+	file: 'gallery.js'
+});
+
+var galleryLabel = Ti.UI.createLabel({
+	text: "Picture Gallery",
+	font: {fontSize: 14, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#000",
+	left: 5,
+	file: 'gallery.js'
+});
+galleryView.add(galleryLabel);
+
+galleryView.addEventListener("click", function(gallery){
+	var gWin = Ti.UI.createWindow({
+		title: 'Gallery',
+		backgroundColor: "#fff",
+		url: gallery.source.file,
+		nav: navWin1
+	});
+	navWin1.openWindow(gWin, {animate:true});
+});
+
+	//Biography View
+var bioView = Ti.UI.createView({
+	backgroundImage: "edited/lannister2.png",
+	borderRadius: 10,
+	opacity: .7,
+	height:50,
+	top:40,
+	left:10,
+	right:10,
+	file: 'bioTable.js'
+});
+
+var bioLabel = Ti.UI.createLabel({
+	text: "Biography",
+	font: {fontSize: 14, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#fff",
+	left: 5,
+	file: 'bioTable.js'
+});
+bioView.add(bioLabel);
+
+bioView.addEventListener("click", function(bio){
+	var bioWindow = Ti.UI.createWindow({
+		title: 'Biography',
+		backgroundColor: "#fff",
+		url: bio.source.file,
+		nav: navWin1
+	});
+	navWin1.openWindow(bioWindow, {animate:true});
+});
+
+	//Bonus View
+var bonusView = Ti.UI.createView({
+	backgroundImage: "edited/stark2.jpg",
+	borderRadius: 10,
+	opacity: .7,
+	height:50,
+	top:40,
+	left:10,
+	right:10,
+	file: 'bonus.js'
+});
+
+var bonusLabel = Ti.UI.createLabel({
+	text: "Bonus",
+	font: {fontSize: 14, fontFamily: "Helvetica", fontWeight: "bold"},
+	color: "#000",
+	left: 5,
+	file: 'custom.js'
+});
+bonusView.add(bonusLabel);
+
+bonusView.addEventListener("click", function(custom){
+	var bonusWindow = Ti.UI.createWindow({
+		title: "Bonus",
+		backgroundImage: "new/sVl.JPG",
+		url: custom.source.file,
+		nav: navWin1
+	});
+	navWin1.openWindow(bonusWindow, {animate:true});
+});
+
+	//Course View
+var courseNumView = Ti.UI.createView({
+	backgroundImage: "edited/tarDragon.jpg",
+	height:75,
+	width: Ti.UI.setWidth,
+	opacity: .8,
+	top:71
+});
+
+var courseNumLabel = Ti.UI.createLabel({
+	text: "Josh Ketcham  VFW 1312",
+	font: {fontSize: 12, fontFamily: "Arial"},
+	color: "#000",
+	left: 15
+});
+courseNumView.add(courseNumLabel);
+
+
+//Main / Call Code
+navWin1.open();
+mWin.add(galleryView);
+mWin.add(bioView);
+mWin.add(bonusView);
+mWin.add(courseNumView);

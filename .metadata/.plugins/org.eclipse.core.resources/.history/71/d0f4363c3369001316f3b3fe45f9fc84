@@ -1,0 +1,163 @@
+//Window
+var cWin = Ti.UI.currentWindow;
+
+//JSON
+var houseData =
+{
+		"Stark":
+	{
+		"houseRow": 
+			[
+				{
+					title:"Eddard 'Ned' Stark", 
+					info: "Eddard 'Ned' Stark was the head of the House Stark. He was considered by many to be an honest, honorable man. However he was behead by King Jofferry Baratheon for the crime of treason.",
+					profilePic: "bioPic/Ned_Stark_1.jpg",
+					housePicture: "bioPic/stark.png",
+					honor: 'Honor: High (95%)',
+					power: 'Army Power: Medium (65%)',
+					houseSigil: 'House Sigil: Dire Wolf'
+				}
+			]
+	},
+		"Lannister":
+	{
+		"houseRow": 
+			[
+				{
+					title: "Tywin Lannister", 
+			 		info: "Tywin Lannister is the lord of House Lannister, the Lord Paramount of the Westerlands, and the richest man in the Seven Kingdoms. He married Joanna Lannister and their first children were the fraternal twins Cersei and Jaime. She died after giving birth to Tyrion.",
+					profilePic: "bioPic/Tywin_Lannister_1.jpg",
+					housePicture: "bioPic/lannister.png",
+					honor: 'Honor: Low (0%)',
+					power: 'Army Power: High (80%)',
+					houseSigil: 'House Sigil: Lion'
+
+				},
+				{
+			 		title: "Tyrion Lannister", 
+			 		info: "Tyrion Lannister is the youngest son of Joanna Lannister and Lord Tywin Lannister.He is a dwarf, causing him problems and persecution (being referred to derisively by various names, such as 'the Imp' and 'The Halfman'). This is mitigated by his intellect and his family's wealth and power.",
+			 		profilePic: "bioPic/Tyrion_Lannister_1.jpg",
+					housePicture: "bioPic/lannister.png",
+					honor: 'Honor: Low (25%)',
+					power: 'Army Power: Low (10%)',
+					houseSigil: 'House Sigil: Lion'
+			 	}
+			]
+	},
+		"Targaryen":
+	{
+		"houseRow": 
+			[
+				{
+					title:"Danerys Targaryen", 
+					info: "Danerys Targaryen is the only surviving child of House Targaryen, who was ousted from the Iron Throne during Robert Baratheon's Rebellion. She is currently conquering the cities with her dragons. She has many names including Daneary's Stormborn, Khaleesi of the Great Grass Sea, and Mother of Dragons.",
+					profilePic: "bioPic/Daenerys_2.jpg",
+					housePicture: "bioPic/targaryen.PNG",
+					honor: 'Honor: Medium (50%)',
+					power: 'Army Power: High (75%)',				
+					houseSigil: 'House Sigil: Three-Headed Dragon'
+				}
+			]
+	},
+};
+
+//Table
+var rulingHouse = Ti.UI.createTableView({
+	style: Ti.UI.iPhone.TableViewStyle.PLAIN,
+	headerTitle:"			   Major Players",
+	footerTitle: "		   Let the Game Begin!",
+	title: {fontSize: 22, fontFamily: "AmericanTypewriter"},
+	height: 235,
+	top: 20,
+	width: Ti.UI.setWidth,
+	borderColor: "black"
+});
+
+	//Table Info
+var theHouse = [];
+
+for (var n in houseData) {
+	var tableSec = Ti.UI.createTableViewSection ({
+		
+	});
+		for(var i = 0, j = houseData[n].houseRow.length; i<j; i++){
+			var theRows = Ti.UI.createTableViewRow({
+				title: houseData[n].houseRow[i].title,
+				info: houseData[n].houseRow[i].info,
+				housePicture: houseData[n].houseRow[i].housePicture,
+				profilePic: houseData[n].houseRow[i].profilePic,
+				honor: houseData[n].houseRow[i].honor,
+				power: houseData[n].houseRow[i].power,
+				houseSigil: houseData[n].houseRow[i].houseSigil,											
+				font: {fontSize: 14, fontFamily: "Arial"}
+			});
+			tableSec.add(theRows);
+	};
+	theHouse.push(tableSec);
+}
+
+	//Info/Pic/Stats
+rulingHouse.addEventListener("click", function(houseEvent){
+	var hWindow = Ti.UI.createWindow({
+		title: houseEvent.source.title,
+		font: {fontSize: 18, fontFamily: "AmericanTypewriter"},
+		backgroundImage: houseEvent.source.housePicture,
+		backgroundColor: "#252525"
+	});
+	
+	var hLabel = Ti.UI.createLabel({
+		text: houseEvent.source.info,
+		font: {fontSize: 12, fontFamily: "AmericanTypewriter"},
+		backgroundColor: "#fff",
+		borderRadius: 5,
+		height: Ti.UI.SIZE,
+		bottom: 100
+	});	
+	
+	var proPic = Ti.UI.createImageView({
+		image: houseEvent.source.profilePic,
+		height:200,
+		width: 150, 
+		top: 20,
+		left: 10
+	});
+	
+	var infoView = Ti.UI.createView({
+		backgroundColor: "#fff",
+		opacity: .7,
+		borderRadius: 5,
+		height: 200,
+		width: 140,
+		top: 20,
+		right: 15
+	});
+
+	var honorLvL = Ti.UI.createLabel({
+		text: houseEvent.source.honor,
+		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
+		top:20,
+		left: 5
+	});	
+
+	var powerLvL = Ti.UI.createLabel({
+		text: houseEvent.source.power,
+		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
+		top:60,
+		left: 5
+	});		
+	
+	var houseAnimal = Ti.UI.createLabel({
+		text: houseEvent.source.houseSigil,
+		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
+		top:100,
+		left: 5		
+	});
+	infoView.add(houseAnimal, powerLvL, honorLvL);
+	hWindow.add(hLabel, proPic, infoView);
+	cWin.nav.openWindow(hWindow, {animate: true});
+});
+//Table End
+
+//Main / Call Code
+rulingHouse.setData(theHouse);
+cWin.add(rulingHouse);

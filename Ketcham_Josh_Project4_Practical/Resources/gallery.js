@@ -1,6 +1,5 @@
 //Window
 var cWin = Ti.UI.currentWindow;
-var notI;
 
 //Next Image Button
 var newImageView = Ti.UI.createView({
@@ -20,11 +19,9 @@ var newImageLabel = Ti.UI.createLabel({
 });
 newImageView.add(newImageLabel);
 
-
 //Gallery Folder
 var gallery= Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "profilePic");
 var folderContents = gallery.getDirectoryListing();
-
 
 //Pics
 var imageView = Ti.UI.createImageView({
@@ -33,19 +30,24 @@ var imageView = Ti.UI.createImageView({
 			height: 300,
 			top: 10
 	});
-//	imageView.push(imageArray);
-//Randomize Pics
+
+	//Empty Variable
+var notI;
+	//Randomize Pics
 	newImageView.addEventListener("click", function(){
 		var i = Math.floor(Math.random() * folderContents.length);
 		
 		while(notI === i){
 		var i = Math.floor(Math.random(imageView.image) * folderContents.length);
+		//var i = Math.floor(Math.random() * folderContents.length);
 			};
 		imageView.image = "profilePic/" + folderContents[i];
 		notI = i;
 	});
 
-
-
+//Main / Call Code
 cWin.add(newImageView);
 cWin.add(imageView);
+
+
+//Pictures found at http://awoiaf.westeros.org and various internet sites

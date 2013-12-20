@@ -1,10 +1,12 @@
+//Window
 var cWin = Ti.UI.currentWindow;
 
+//Activity Indicator open/close window
 var noPointWin = Ti.UI.createWindow({
   backgroundColor: "#fff"
 });
 
-
+//Activity Indicator start
 var style = Ti.UI.iPhone.ActivityIndicatorStyle.DARK;
 
 var theIndicator = Ti.UI.createActivityIndicator({
@@ -25,11 +27,12 @@ noPointWin.addEventListener('open', function (e) {
     theIndicator.hide();
   }, 2000);
 });
+//Activity Indicator end
 
-
+//ButtonBar start
 var bar1 = Titanium.UI.createButtonBar({
     labels:['Stark', 'Lannister'],
-    backgroundColor:'#fff',
+    backgroundColor:'#f3f3f3',
     top:10,
     style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
     height:25,
@@ -37,28 +40,28 @@ var bar1 = Titanium.UI.createButtonBar({
 });
 
 bar1.addEventListener('click', function(kingdom){
-//House Stark
+	//House Stark
 	if(kingdom.index === 0){
 		var starkWin = Ti.UI.createWindow({
 			title: 'House Stark',
 			font: {fontSize: 18, fontFamily: "AmericanTypewriter"},
-			backgroundImage: "new/stark.png",
+			backgroundImage: "new/stark_crest.png",
 			backgroundColor: "#fff"
 		});	
 		
 		var starkView = Ti.UI.createView({
-			backgroundColor: '#fff',
+			backgroundColor: '#f3f3f3',
 			height: Ti.UI.SIZE,
 			bottom: 80,
-			opacity: .7
+			opacity: .9
 		});
 		
 		var starkLabel = Ti.UI.createLabel({
-			text: "You have chosen House Stark! Read the books to find out their fate! Don't watch the TV show.",
+			text: "You have chosen House Stark! They are honorable and trustworthy. Read the books to find out their fate! Don't watch the TV show.",
 			font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
 		});
 		
-			//Sample View
+			//Sample Pic View
 			var nedPic = Ti.UI.createView({
 				backgroundColor: "#000"
 			});
@@ -68,7 +71,7 @@ bar1.addEventListener('click', function(kingdom){
 			});
 			
 			var robbPic = Ti.UI.createView({
-				backgroundColor: "#000"
+				backgroundColor: "#f3f3f3"
 			});
 			
 			var sansaPic = Ti.UI.createView({
@@ -78,25 +81,25 @@ bar1.addEventListener('click', function(kingdom){
 			var ned = Ti.UI.createImageView({
 				image: "new/NedStark.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#625f66"
+				backgroundColor: "#f3f3f3"
 			});
 			
 			var cat = Ti.UI.createImageView({
-				image: "new/CatStark.jpg",
+				image: "new/CatStark_1.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#625f66"
+				backgroundColor: "#f3f3f3"
 			});
 			
 			var robb = Ti.UI.createImageView({
 				image: "new/robb3.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#625f66"
+				backgroundColor: "#f3f3f3"
 			});
 			
 			var sansa = Ti.UI.createImageView({
 				image: "new/SansaStark.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#625f66"
+				backgroundColor: "#f3f3f3"
 			});
 			nedPic.add(ned);
 			catPic.add(cat);
@@ -104,13 +107,13 @@ bar1.addEventListener('click', function(kingdom){
 			sansaPic.add(sansa);
 			
 			var starkPics = Ti.UI.createScrollableView({
-				width: 130,
-				height: 130,
-				center:0,
-				backgroundColor:"#fff",
+				width: 225,
+				height: 225,
+				top: 40,
+				backgroundColor:"#f3f3f3",
 				views: [nedPic, catPic, robbPic, sansaPic],
 				showPagingControl: true,
-				pagingControlColor: "#000"
+				pagingControlColor: "#808080"
 			});
 		starkView.add(starkLabel);
 		starkWin.add(starkView, starkPics);
@@ -123,23 +126,23 @@ bar1.addEventListener('click', function(kingdom){
 	var lannWin = Ti.UI.createWindow({
 		title: 'House Lannister',
 		font: {fontSize: 18, fontFamily: "AmericanTypewriter"},
-		backgroundImage: "new/lannister.png",
+		backgroundImage: "new/lannister_crest.png",
 		backgroundColor: "#fff"
 	});	
 	
 	var lannView = Ti.UI.createView({
-		backgroundColor: '#fff',
+		backgroundColor: '#8b1818',
 		height: Ti.UI.SIZE,
 		bottom: 100,
-		opacity: .7
+		opacity: .9
 	});
 
 	var lannLabel = Ti.UI.createLabel({
-		text: "You have chosen House Lannister! Read the books to find out their fate! Don't watch the TV show.",
+		text: "You have chosen House Lannister! They are clever and have lots of power. Read the books to find out their fate! Don't watch the TV show.",
 		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"}
 	});
 			
-			//Sample View
+			//Sample Pic View
 			var tywinPic = Ti.UI.createView({
 				backgroundColor: "#000"
 			});
@@ -159,25 +162,25 @@ bar1.addEventListener('click', function(kingdom){
 			var tywin = Ti.UI.createImageView({
 				image: "new/TywLann.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#FF0000"
+				backgroundColor: "#8b1818"
 			});
 			
 			var cersei = Ti.UI.createImageView({
 				image: "new/CerseiLann.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#FF0000"
+				backgroundColor: "#8b1818"
 			});
 			
 			var jamie = Ti.UI.createImageView({
 				image: "new/JaimeLann.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#FF0000"
+				backgroundColor: "#8b1818"
 			});
 			
 			var tyrion = Ti.UI.createImageView({
 				image: "new/TyrLann.jpg",
 				height:Ti.UI.FIT,
-				backgroundColor: "#FF0000"
+				backgroundColor: "#8b1818"
 			});
 			tywinPic.add(tywin);
 			cerseiPic.add(cersei);
@@ -185,21 +188,23 @@ bar1.addEventListener('click', function(kingdom){
 			tyrionPic.add(tyrion);
 			
 			var lannPics = Ti.UI.createScrollableView({
-				width: 130,
-				height: 130,
-				top: 130,
-				backgroundColor:"#fff",
+				width: 225,
+				height: 225,
+				top: 40,
+				backgroundColor:"#8b1818",
 				views: [tywinPic, cerseiPic, jamiePic, tyrionPic],
 				showPagingControl: true,
-				pagingControlColor: "#252525"
+				pagingControlColor: "#5e1111"
 			});
 	lannView.add(lannLabel);
 	lannWin.add(lannView, lannPics);
 	cWin.nav.openWindow(lannWin, {animate: true});
 };
 });
+//ButtonBar End
 
 
+//Footnote View
 var controlView = Ti.UI.createView({
 	backgroundColor: '#fff',
 	height: Ti.UI.SIZE,
@@ -207,13 +212,15 @@ var controlView = Ti.UI.createView({
 	});
 		
 var controlLabel = Ti.UI.createLabel({
-	text: '* ActivityIndicator and BarButton Ti.UI Control were used in the making of this app',
+	text: '* ActivityIndicator and BarButton Ti.UI Controls were used in the making of this app',
 	font: {fontSize: 6, fontFamily: "AmericanTypewriter", fontColor: "#000"},
 	});
 	controlView.add(controlLabel);
 	cWin.add(controlView);
 
 
-
+//Main / Call Code
 cWin.add(bar1);
 cWin.nav.openWindow(noPointWin, {animate: true});
+
+//Photos found on various sites on the Internet

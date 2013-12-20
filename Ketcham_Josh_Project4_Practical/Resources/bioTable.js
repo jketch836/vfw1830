@@ -1,5 +1,6 @@
 //Window
 var cWin = Ti.UI.currentWindow;
+
 //JSON
 var houseData =
 {
@@ -15,9 +16,17 @@ var houseData =
 					honor: 'Honor: High (95%)',
 					power: 'Army Power: Medium (65%)',
 					houseSigil: 'House Sigil: Dire Wolf'
+				},
+				{
+					title:"Catelyn Tully", 
+					info: "Catelyn Tully was the wife of Ned Stark. She was proud, strong, kind, and generous. Aquaintances saw her as honourable and upright, holding duty over desire as a governing principle of behaviour. She died at the Red Wedding.",
+					profilePic: "bioPic/CatStark_1.jpg",
+					housePicture: "bioPic/stark.png",
+					honor: 'Honor: High (95%)',
+					power: 'Army Power: Medium (45%)',
+					houseSigil: 'House Sigil: Dire Wolf '
 				}
 			]
-	
 	},
 		"Lannister":
 	{
@@ -49,8 +58,8 @@ var houseData =
 		"houseRow": 
 			[
 				{
-					title:"Danerys Targaryen", 
-					info: "The true heir to the Iron Throne.",
+					title:"Daenerys Targaryen", 
+					info: "Daenerys Targaryen is the only surviving child of House Targaryen, they were ousted from the Iron Throne during Robert Baratheon's Rebellion. She is currently conquering the cities with her dragons. She is most notibley known as Daneary's Stormborn and Mother of Dragons.",
 					profilePic: "bioPic/Daenerys_2.jpg",
 					housePicture: "bioPic/targaryen.PNG",
 					honor: 'Honor: Medium (50%)',
@@ -58,7 +67,6 @@ var houseData =
 					houseSigil: 'House Sigil: Three-Headed Dragon'
 				}
 			]
-	
 	},
 };
 
@@ -68,16 +76,15 @@ var rulingHouse = Ti.UI.createTableView({
 	headerTitle:"			   Major Players",
 	footerTitle: "		   Let the Game Begin!",
 	title: {fontSize: 22, fontFamily: "AmericanTypewriter"},
-	height: 235,
+	height: 275,
 	top: 20,
 	width: Ti.UI.setWidth,
 	borderColor: "black"
 });
 
-
+	//Table Info
 var theHouse = [];
 
-//Table Info
 for (var n in houseData) {
 	var tableSec = Ti.UI.createTableViewSection ({
 		
@@ -98,7 +105,7 @@ for (var n in houseData) {
 	theHouse.push(tableSec);
 }
 
-//Info/Pic/Stats
+	//Info/Pic/Stats
 rulingHouse.addEventListener("click", function(houseEvent){
 	var hWindow = Ti.UI.createWindow({
 		title: houseEvent.source.title,
@@ -110,7 +117,7 @@ rulingHouse.addEventListener("click", function(houseEvent){
 	var hLabel = Ti.UI.createLabel({
 		text: houseEvent.source.info,
 		font: {fontSize: 12, fontFamily: "AmericanTypewriter"},
-		backgroundColor: "#fff",
+		backgroundColor: "#f3f3f3",
 		borderRadius: 5,
 		height: Ti.UI.SIZE,
 		bottom: 100
@@ -125,7 +132,7 @@ rulingHouse.addEventListener("click", function(houseEvent){
 	});
 	
 	var infoView = Ti.UI.createView({
-		backgroundColor: "#fff",
+		backgroundColor: "#f3f3f3",
 		opacity: .7,
 		borderRadius: 5,
 		height: 200,
@@ -137,29 +144,32 @@ rulingHouse.addEventListener("click", function(houseEvent){
 	var honorLvL = Ti.UI.createLabel({
 		text: houseEvent.source.honor,
 		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
-		top:20,
+		top:10,
 		left: 5
 	});	
 
 	var powerLvL = Ti.UI.createLabel({
 		text: houseEvent.source.power,
 		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
-		top:60,
+		center: 0,
 		left: 5
 	});		
 	
 	var houseAnimal = Ti.UI.createLabel({
 		text: houseEvent.source.houseSigil,
 		font: {fontSize: 14, fontFamily: "AmericanTypewriter", fontWeight: "bold", fontColor: "#000"},
-		top:100,
+		bottom: 10,
 		left: 5		
 	});
 	infoView.add(houseAnimal, powerLvL, honorLvL);
 	hWindow.add(hLabel, proPic, infoView);
 	cWin.nav.openWindow(hWindow, {animate: true});
 });
+//Table End
 
-
-
+//Main / Call Code
 rulingHouse.setData(theHouse);
 cWin.add(rulingHouse);
+
+
+//Information and Pictures found at http://awoiaf.westeros.org

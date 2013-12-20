@@ -72,9 +72,10 @@
 <project name="Ketcham_Josh_Project4_Practical">
 <expanded>
 <element path="/Ketcham_Josh_Project4_Practical/Resources"/>
+<element path="/Ketcham_Josh_Project4_Practical/Resources/edited"/>
 </expanded>
 <selection>
-<element path="/Ketcham_Josh_Project4_Practical"/>
+<element path="/Ketcham_Josh_Project4_Practical/Resources/edited/tarDragon.jpg"/>
 </selection>
 </project>
 <project name="lab1_ketcham_josh">
@@ -85,18 +86,10 @@
 <element path="/lab1_ketcham_josh/Resources/app.js"/>
 </selection>
 </project>
-<project name="lec 10">
-<expanded>
-<element path="/lec 10/Resources"/>
-</expanded>
-<selection>
-<element path="/lec 10/Resources/app.js"/>
-</selection>
-</project>
 </viewState>
 </view>
 </views>
-<perspectives activePart="com.aptana.explorer.view" activePerspective="com.appcelerator.titanium.ui.StudioPerspective">
+<perspectives activePerspective="com.appcelerator.titanium.ui.StudioPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.appcelerator.titanium.ui.perspectives.TitaniumStudioPerspectiveFactory" id="com.appcelerator.titanium.ui.StudioPerspective" label="Studio"/>
 <alwaysOnActionSet id="com.aptana.browser.actionSet"/>
@@ -129,12 +122,16 @@
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="com.aptana.ui.WebPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="com.aptana.explorer.view"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="16384" id="org.eclipse.ui.internal.ViewStack@13e49c2" orientation="512" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
 <view id="org.eclipse.ui.console.ConsoleView" ratio="0.2981455"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="leftArea" orientation="512" selectedTabId="com.aptana.explorer.view" style="0">
+<fastViews>
+<view id="com.aptana.explorer.view" ratio="0.29957205"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -147,14 +144,11 @@
 </folder>
 </info>
 <info folder="true" part="leftArea" ratio="0.24957119" ratioLeft="291" ratioRight="875" relationship="2" relative="org.eclipse.ui.internal.ViewStack@13e49c2">
-<folder activePageID="com.aptana.explorer.view" appearance="2" expanded="2">
-<page content="com.aptana.explorer.view" label="App Explorer"/>
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<folder appearance="2" expanded="0">
+<page content="com.aptana.explorer.view" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="894" ratioRight="298" relationship="2" relative="leftArea">
@@ -211,6 +205,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="bonus.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bonus.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/bonus.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="gallery.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/gallery.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/gallery.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="bioTable.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bioTable.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/app.js">
 <persistable path="/Ketcham_Josh_Project4_Practical/Resources/app.js"/>
 </file>
@@ -219,12 +222,6 @@
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/vfw_labs/Ketcham_Josh_Project3/Resources/app.js">
 <persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/vfw_labs/Ketcham_Josh_Project3/Resources/app.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="bonus.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bonus.js">
-<persistable path="/Ketcham_Josh_Project4_Practical/Resources/bonus.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="bioTable.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bioTable.js">
-<persistable path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="lec 10/Resources/app.js">
 <persistable path="/lec 10/Resources/app.js"/>
@@ -240,9 +237,6 @@
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="HouseMembers.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/vfw_labs/Ketcham_Josh_Project2/Resources/HouseMembers.js">
 <persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/vfw_labs/Ketcham_Josh_Project2/Resources/HouseMembers.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="gallery.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/gallery.js">
-<persistable path="/Ketcham_Josh_Project4_Practical/Resources/gallery.js"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="/Users/jketch/Documents/Full_Sail/04 Visual Frameworks MDV1830/lec5 codeRefactoring/Resources/app.js">
 <persistable uri="file:/Users/jketch/Documents/Full_Sail/04%20Visual%20Frameworks%20MDV1830/lec5%20codeRefactoring/Resources/app.js"/>
