@@ -75,7 +75,7 @@
 <element path="/Ketcham_Josh_Project4_Practical/Resources/edited"/>
 </expanded>
 <selection>
-<element path="/Ketcham_Josh_Project4_Practical/Resources/edited/tarDragon.jpg"/>
+<element path="/Ketcham_Josh_Project4_Practical/Resources/app.js"/>
 </selection>
 </project>
 <project name="lab1_ketcham_josh">
@@ -144,7 +144,7 @@
 </folder>
 </info>
 <info folder="true" part="leftArea" ratio="0.24957119" ratioLeft="291" ratioRight="875" relationship="2" relative="org.eclipse.ui.internal.ViewStack@13e49c2">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="com.aptana.explorer.view" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
@@ -205,6 +205,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/app.js">
+<persistable path="/Ketcham_Josh_Project4_Practical/Resources/app.js"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="bonus.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bonus.js">
 <persistable path="/Ketcham_Josh_Project4_Practical/Resources/bonus.js"/>
 </file>
@@ -213,9 +216,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="bioTable.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/bioTable.js">
 <persistable path="/Ketcham_Josh_Project4_Practical/Resources/bioTable.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="app.js" tooltip="Ketcham_Josh_Project4_Practical/Resources/app.js">
-<persistable path="/Ketcham_Josh_Project4_Practical/Resources/app.js"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="NedStark.jpg" tooltip="Ketcham_Josh_Project4_Practical/Resources/new/NedStark.jpg">
 <persistable path="/Ketcham_Josh_Project4_Practical/Resources/new/NedStark.jpg"/>
